@@ -1,0 +1,2323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOLLAND | Premium Ethiopian Yoghurt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Mono+One&family=Press+Start+2P&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Modern 2025 color scheme */
+            --primary: #FF4D4D;
+            --primary-light: rgba(255, 77, 77, 0.1);
+            --primary-dark: #d63a3a;
+            --dark: #0A0A0A;
+            --darker: #050505;
+            --light: #FFFFFF;
+            --lighter: rgba(255,255,255,0.95);
+            --bg: #FAFAFA;
+            --text-color: #1A1A1A;
+            --text-light: rgba(26, 26, 26, 0.7);
+            --hero-text: #FFFFFF;
+            --section-padding: clamp(3rem, 6vw, 8rem) clamp(1.5rem, 4vw, 5rem);
+            --border-radius: 24px;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --glass-effect: rgba(255, 255, 255, 0.1);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+            --backdrop-filter: blur(16px);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-slow: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            --gradient-angle: 135deg;
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+            --max-width: 1440px;
+            --fluid-1: clamp(2rem, 6vw, 4rem);
+            --fluid-2: clamp(1.75rem, 5vw, 3.5rem);
+            --fluid-3: clamp(1.5rem, 4vw, 2.5rem);
+            --fluid-4: clamp(1.25rem, 3vw, 1.75rem);
+            --fluid-5: clamp(1rem, 2vw, 1.25rem);
+            --fluid-6: clamp(0.875rem, 1.5vw, 1rem);
+            --fluid-7: clamp(0.75rem, 1.2vw, 0.9rem);
+        }
+
+        /* Theme variations with modern color palettes */
+        .theme-natural {
+            --primary: #ebebeb;
+            --primary-dark: #14090c;
+            --primary-light: rgba(255, 107, 139, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(241, 241, 241, 0.9) 0%, rgba(230, 100, 130, 0.4) 100%);
+        }
+
+        .theme-strawberry {
+            --primary: #FF6B8B;
+            --primary-dark: #e05575;
+            --primary-light: rgba(255, 107, 139, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(190, 60, 90, 0.9) 0%, rgba(230, 100, 130, 0.4) 100%);
+        }
+
+        .theme-mango {
+            --primary: #FFA630;
+            --primary-dark: #e69520;
+            --primary-light: rgba(255, 166, 48, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(210, 120, 30, 0.9) 0%, rgba(240, 150, 50, 0.4) 100%);
+        }
+
+        .theme-banana {
+            --primary: #FFD166;
+            --primary-dark: #e6bc4d;
+            --primary-light: rgba(255, 209, 102, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(210, 170, 70, 0.9) 0%, rgba(240, 200, 100, 0.4) 100%);
+        }
+
+        .theme-blueberry {
+            --primary: #d7d56b;
+            --primary-dark: #c4c255;
+            --primary-light: rgba(186, 215, 107, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(169, 180, 70, 0.9) 0%, rgba(210, 208, 100, 0.4) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-color);
+            overflow-x: hidden;
+            transition: var(--transition-slow);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            font-size: var(--fluid-7);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            font-family: 'Syne', sans-serif;
+            letter-spacing: -0.03em;
+        }
+
+        h1 { font-size: var(--fluid-1); }
+        h2 { font-size: var(--fluid-2); }
+        h3 { font-size: var(--fluid-3); }
+        h4 { font-size: var(--fluid-4); }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Modern Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+            border: 2px solid var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Navigation - Ultra Modern 2025 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.2rem 5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: var(--transition);
+            background-color: rgba(255,255,255,0.98);
+            backdrop-filter: var(--backdrop-filter);
+            -webkit-backdrop-filter: var(--backdrop-filter);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+
+        .theme-natural .navbar,
+        .theme-strawberry .navbar,
+        .theme-mango .navbar,
+        .theme-banana .navbar,
+        .theme-blueberry .navbar {
+            background-color: rgba(255,255,255,0.98);
+            border-bottom: 1px solid var(--primary-light);
+        }
+
+        .logo {
+            font-size: var(--fluid-3);
+            font-weight: 800;
+            color: var(--dark);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo img {
+            height: clamp(32px, 4vw, 42px);
+            transition: var(--transition);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1.5rem, 3vw, 3rem);
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--fluid-6);
+            position: relative;
+            transition: var(--transition);
+            opacity: 0.9;
+            padding: 0.5rem 0;
+            font-family: 'Syne', sans-serif;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 1001;
+            position: relative;
+            width: 32px;
+            height: 32px;
+        }
+
+        .menu-toggle span {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 3px;
+        }
+
+        .menu-toggle span:nth-child(1) {
+            top: 6px;
+        }
+
+        .menu-toggle span:nth-child(2) {
+            top: 16px;
+        }
+
+        .menu-toggle span:nth-child(3) {
+            top: 26px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 16px;
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 16px;
+        }
+
+        /* Hero Section - 2025 Ultra Modern */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 800px;
+            width: 100%;
+            overflow: hidden;
+            perspective: 1000px;
+            isolation: isolate;
+            margin-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            opacity: 0;
+            transition: all 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            transform-style: preserve-3d;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            transform: scale(1.1);
+            transition: transform 8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-slide.active .hero-bg {
+            transform: scale(1);
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--hero-gradient);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 10vw;
+            color: var(--light);
+            transform: translateY(60px) rotateX(15deg);
+            opacity: 0;
+            transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+            transform-style: preserve-3d;
+            transform-origin: center bottom;
+        }
+
+        .hero-slide.active .hero-content {
+            transform: translateY(0) rotateX(0);
+            opacity: 1;
+        }
+
+        .hero-title {
+            font-family: 'Syne', sans-serif;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+            text-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+            color: var(--light);
+            text-transform: uppercase;
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+            font-size: var(--fluid-1);
+        }
+
+        .hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Manrope', sans-serif;
+            margin-bottom: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            max-width: 500px;
+            line-height: 1.4;
+            font-weight: 400;
+            opacity: 0.9;
+            font-size: var(--fluid-5);
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            background-color: var(--primary);
+            color: var(--dark);
+            font-family: 'Syne', sans-serif;
+            font-size: var(--fluid-6);
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 10px 10px 0 rgba(0,0,0,0.15);
+            border: 3px solid var(--light);
+            text-transform: uppercase;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            transition: var(--transition-slow);
+            z-index: -1;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-8px) rotate(2deg);
+            box-shadow: 15px 15px 0 rgba(0,0,0,0.25);
+            background-color: var(--light);
+            color: var(--primary);
+        }
+
+        .hero-cta:hover::before {
+            transform: translateX(100%);
+        }
+
+        .hero-product-image {
+            position: relative;
+            z-index: 3;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 5vw;
+            transform: translateX(120px) rotateY(15deg);
+            opacity: 0;
+            transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+            transform-style: preserve-3d;
+            transform-origin: center left;
+        }
+
+        .hero-slide.active .hero-product-image {
+            transform: translateX(0) rotateY(0);
+            opacity: 1;
+        }
+
+        .hero-product-image img {
+            max-height: 70vh;
+            max-width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(15px 15px 30px rgba(0,0,0,0.5));
+            animation: float 6s ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        /* Slider Navigation - Modern Dots */
+        .hero-slider-nav {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+
+        .slider-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            border: 1px solid transparent;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .slider-dot:hover {
+            transform: scale(1.3);
+            background-color: var(--light);
+        }
+
+        .slider-dot.active {
+            background-color: var(--primary);
+            transform: scale(1.3);
+            border-color: var(--light);
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            color: var(--light);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            opacity: 0;
+            transition: opacity 0.5s ease 1s;
+            cursor: pointer;
+        }
+
+        .hero-slide.active .hero-scroll {
+            opacity: 1;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-15px);}
+            60% {transform: translateY(-8px);}
+        }
+
+        /* About Section - 3D Parallax Effect */
+        .about {
+            padding: var(--section-padding);
+            background-color: var(--light);
+            position: relative;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            transform: translateX(-60px) rotate(-5deg) translateZ(50px);
+            opacity: 0;
+            transition: var(--transition-slow);
+            position: relative;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+
+        .about-image.visible {
+            transform: translateX(0) rotate(0deg) translateZ(0);
+            opacity: 1;
+        }
+
+        .about-content {
+            transform: translateX(60px) translateZ(50px);
+            opacity: 0;
+            transition: var(--transition-slow);
+            transform-style: preserve-3d;
+        }
+
+        .about-content.visible {
+            transform: translateX(0) translateZ(0);
+            opacity: 1;
+        }
+
+        .about-title {
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            position: relative;
+            display: inline-block;
+            font-weight: 800;
+        }
+
+        .about-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+
+        .about-text {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: var(--fluid-7);
+        }
+
+        /* Products Section - 3D Grid */
+        .products {
+            padding: var(--section-padding);
+            background-color: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            position: relative;
+        }
+
+        .section-title {
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: var(--fluid-6);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+
+        .product-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            transform: translateY(60px) scale(0.95) rotateX(15deg);
+            opacity: 0;
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.2) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .product-card.visible {
+            transform: translateY(0) scale(1) rotateX(0);
+            opacity: 1;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            z-index: 2;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-image {
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            transition: var(--transition-slow);
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.08);
+        }
+
+        .product-info {
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+            background-color: var(--light);
+        }
+
+        .product-name {
+            margin-bottom: 0.8rem;
+            color: var(--text-color);
+            transition: var(--transition-fast);
+            font-size: var(--fluid-4);
+        }
+
+        .product-card:hover .product-name {
+            color: var(--primary);
+        }
+
+        .product-desc {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: var(--fluid-7);
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: var(--fluid-4);
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .product-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--dark);
+            color: var(--light);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            font-size: 1.2rem;
+        }
+
+        .product-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: var(--transition-slow);
+        }
+
+        .product-cta:hover {
+            background-color: var(--primary);
+            transform: translateY(-4px) rotate(8deg);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-cta:hover::before {
+            left: 100%;
+        }
+
+        /* Values Section - Glass Morphism */
+        .values {
+            padding: var(--section-padding);
+            background-color: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .values::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="%23f5f5f5" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2.5rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            transform: translateY(60px);
+            opacity: 0;
+            transition: var(--transition);
+            background-color: rgba(255,255,255,0.7);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-effect);
+            transform-style: preserve-3d;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .value-card:hover::before {
+            height: 8px;
+        }
+
+        .value-card.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .value-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            color: var(--primary);
+            font-size: 2rem;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid var(--glass-effect);
+        }
+
+        .value-card:hover .value-icon {
+            transform: rotate(12deg) scale(1.1);
+            background-color: var(--primary);
+            color: var(--light);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .value-title {
+            margin-bottom: 1.2rem;
+            color: var(--text-color);
+            transition: var(--transition-fast);
+            font-weight: 700;
+            font-size: var(--fluid-4);
+        }
+
+        .value-card:hover .value-title {
+            color: var(--primary);
+        }
+
+        .value-text {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: var(--fluid-7);
+        }
+
+        /* Testimonials - 3D Carousel */
+        .testimonials {
+            padding: var(--section-padding);
+            background-color: var(--bg);
+            position: relative;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="%23ffffff" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: top center;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            perspective: 1000px;
+        }
+
+        .testimonial {
+            text-align: center;
+            padding: 3rem 2.5rem;
+            display: none;
+            transform: scale(0.9) rotateY(30deg);
+            opacity: 0;
+            transition: var(--transition-slow);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            transform-style: preserve-3d;
+        }
+
+        .testimonial.active {
+            display: block;
+            transform: scale(1) rotateY(0);
+            opacity: 1;
+            position: relative;
+        }
+
+        .testimonial-text {
+            font-weight: 400;
+            color: var(--text-color);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            font-style: italic;
+            position: relative;
+            padding: 0 2rem;
+            font-size: var(--fluid-5);
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            line-height: 1;
+            font-family: serif;
+        }
+
+        .testimonial-text::before {
+            top: -1.5rem;
+            left: 0;
+        }
+
+        .testimonial-text::after {
+            bottom: -3rem;
+            right: 0;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: var(--fluid-5);
+        }
+
+        .testimonial-role {
+            color: var(--text-light);
+            font-size: var(--fluid-7);
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .testimonial-dot::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 1px solid var(--primary);
+            border-radius: 50%;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .testimonial-dot:hover::before {
+            opacity: 0.5;
+        }
+
+        .testimonial-dot.active {
+            background-color: var(--primary);
+            transform: scale(1.2);
+        }
+
+        .testimonial-dot.active::before {
+            opacity: 0.3;
+        }
+
+        /* Newsletter - Animated Gradient */
+        .newsletter {
+            padding: 8rem 5vw;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--light);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(0,0,0,0.05)" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .newsletter-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            transform: translateY(40px);
+            opacity: 0;
+            transition: var(--transition-slow);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .newsletter-container.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .newsletter-title {
+            margin-bottom: 1.2rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-weight: 800;
+            font-size: var(--fluid-2);
+        }
+
+        .newsletter-text {
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            font-size: var(--fluid-6);
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 1.2rem 1.8rem;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            font-size: var(--fluid-7);
+            outline: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .newsletter-input:focus {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .newsletter-button {
+            padding: 1.2rem 2.5rem;
+            background-color: var(--dark);
+            color: var(--light);
+            border: none;
+            border-radius: 0 50px 50px 0;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+            font-family: 'Syne', sans-serif;
+            font-size: var(--fluid-6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .newsletter-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: var(--transition-slow);
+        }
+
+        .newsletter-button:hover {
+            background-color: var(--darker);
+            transform: translateY(-3px);
+        }
+
+        .newsletter-button:hover::before {
+            left: 100%;
+        }
+
+        /* Footer - Modern Dark */
+        /* Footer Styles */
+ /* New Footer Styles */
+    /* New Footer Styles */
+    .holland-footer {
+        background-color: #000000;
+        padding: 3rem 5vw 2rem;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Manrope', sans-serif;
+    }
+
+    /* Green Rhombus Stripes */
+    .footer-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            repeating-linear-gradient(
+                45deg,
+                rgba(1, 27, 1, 0.856),
+                rgba(0, 0, 0, 0.712) 10px,
+                transparent 10px,
+                transparent 20px
+            ),
+            repeating-linear-gradient(
+                -45deg,
+                rgba(0, 0, 0, 0.89),
+                rgba(0, 0, 0, 0.692) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+        z-index: 0;
+        animation: patternMove 20s linear infinite;
+    }
+
+    @keyframes patternMove {
+        0% { background-position: 0 0; }
+        100% { background-position: 400px 400px; }
+    }
+
+    .footer-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 2rem;
+    }
+
+    .footer-brand {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-logo-text {
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+        font-size: 28px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .footer-logo-text img {
+        height: 36px;
+    }
+
+    .footer-description {
+        color: #ffffff;
+        line-height: 1.6;
+        font-size: 15px;
+        max-width: 300px;
+    }
+
+    .footer-column-title {
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+        font-size: 18px;
+        position: relative;
+    }
+
+    .footer-column-title::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: #ffffff; /* Green accent */
+    }
+
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 12px;
+    }
+
+    .footer-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #ffffff; /* Green hover */
+        padding-left: 5px;
+    }
+
+    .footer-contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .footer-contact-icon {
+        color: #ffffff; /* Green icons */
+        font-size: 16px;
+        margin-top: 2px;
+    }
+
+    .footer-contact-text {
+        color: #ffffff;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        margin-top: 3rem;
+        border-top: 1px solid rgb(247, 240, 240); /* Light green border */
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+        }
+        
+        .footer-description {
+            max-width: 100%;
+        }
+    }
+
+    /* Floating elements */
+    .footer-floating {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255,77,77,0.05);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        animation: float 15s infinite ease-in-out;
+        z-index: 0;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+        }
+        
+        .footer-about {
+            max-width: 100%;
+        }
+    }
+
+        /* Floating Elements - 3D Particles */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            animation: float 15s infinite ease-in-out;
+            z-index: 0;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg) translateZ(0);
+            }
+            25% {
+                transform: translate(15px, 15px) rotate(5deg) translateZ(15px);
+            }
+            50% {
+                transform: translate(-15px, 8px) rotate(-5deg) translateZ(8px);
+            }
+            75% {
+                transform: translate(8px, -15px) rotate(3deg) translateZ(12px);
+            }
+        }
+
+        /* Cursor Effects */
+        .cursor {
+            position: fixed;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.15s ease;
+            display: none;
+        }
+
+        .cursor-follower {
+            position: fixed;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: rgba(255, 77, 77, 0.2);
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease, width 0.2s ease, height 0.2s ease;
+            display: none;
+        }
+
+        /* 2025 Modern Additions */
+        .glow-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, var(--primary-light), transparent 70%);
+            opacity: 0.4;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hover-scale {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+
+        /* Product card image hover effect */
+        .product-image-container {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .product-image-main {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: var(--transition-slow);
+            transform-style: preserve-3d;
+            z-index: 1;
+        }
+
+        .product-image-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: var(--transition-slow);
+            transform-style: preserve-3d;
+            z-index: 2;
+        }
+
+        .product-card:hover .product-image-main {
+            opacity: 0;
+            transform: scale(1.1);
+        }
+
+        .product-card:hover .product-image-hover {
+            opacity: 1;
+            transform: scale(1.08);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1600px) {
+            :root {
+                --section-padding: clamp(3rem, 5vw, 7rem) clamp(1.5rem, 3vw, 4rem);
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .section-title {
+                font-size: var(--fluid-2);
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            :root {
+                --section-padding: clamp(2.5rem, 4vw, 6rem) clamp(1rem, 3vw, 4rem);
+                --border-radius: 18px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-image {
+                height: 400px;
+                order: -1;
+            }
+            
+            .hero-cta {
+                font-size: var(--fluid-6);
+                padding: 1rem 2rem;
+            }
+            
+            .testimonial-text {
+                font-size: var(--fluid-5);
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: clamp(2rem, 3vw, 5rem) clamp(1rem, 2vw, 3rem);
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--dark);
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 2.5rem;
+                transform: translateX(100%);
+                transition: var(--transition);
+                z-index: 1000;
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                background-color: rgba(10,10,10,0.95);
+            }
+
+            .nav-links a {
+                color: rgba(255,255,255,0.9);
+            }
+
+            .nav-links a:hover {
+                color: var(--primary);
+            }
+
+            .theme-natural .nav-links a,
+            .theme-strawberry .nav-links a,
+            .theme-mango .nav-links a,
+            .theme-banana .nav-links a,
+            .theme-blueberry .nav-links a {
+                color: rgba(255,255,255,0.9);
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .hero-slide {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-product-image {
+                display: none;
+            }
+            
+            .hero-content {
+                text-align: center;
+                padding: 0 5vw;
+            }
+            
+            .hero-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-input {
+                border-radius: 50px;
+                margin-bottom: 1rem;
+            }
+
+            .newsletter-button {
+                border-radius: 50px;
+                width: 100%;
+            }
+
+            .testimonial-text {
+                font-size: var(--fluid-5);
+                padding: 0;
+            }
+
+            .testimonial-text::before,
+            .testimonial-text::after {
+                display: none;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            :root {
+                --section-padding: clamp(1.5rem, 3vw, 4rem) clamp(1rem, 2vw, 2.5rem);
+            }
+
+            .about-title {
+                font-size: var(--fluid-3);
+            }
+
+            .newsletter-title {
+                font-size: var(--fluid-3);
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-slider-nav {
+                bottom: 60px;
+            }
+            
+            .slider-dot {
+                width: 14px;
+                height: 14px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .cursor, .cursor-follower {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="./Logo.PNG" alt="Holland Yoghurt"></a>
+        <div class="nav-links">
+            <a href="./Index.html">Home</a>
+            <a href="./Products.html">Products</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./ourstory.html">Our Story</a>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section - 2025 Style -->
+    <section class="hero" id="home">
+        <div class="glow-effect"></div>
+        <div class="hero-slider">
+            <!-- Slide 1 - Natural -->
+            <div class="hero-slide active" data-theme="natural">
+                <div class="hero-bg" style="background-image: url('https://imgs.search.brave.com/QgmoZ2ipMKoAfuOFF6VKlFquQv0D5hBC_T3Q-KbwKwA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTQ1/MzQwMTU2L3Bob3Rv/L2Jvd2wtb2Ytd2hp/dGUteW9naHVydC13/aXRoLWJlcnJpZXMt/aXNvbGF0ZWQtb24t/d2hpdGUtYmFjLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz0z/RWUxdDU2QUcwd19F/Tlo3dDZweVBKNjhu/ei1CZ0RZdUpxM1NB/T3BqSExJPQ');"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">PREMIUM<br>NATURAL<br>YOGHURT</h1>
+                    <p class="hero-subtitle">We’ve perfected Ethiopian Yoghurt processing. Our Dutch manufacturing process takes the highest quality raw local milk and transforms it into a rich, tasty, creamy, and delicious yoghurt that our consumers can’t get enough of. The best part is that this Yoghurt is incredibly healthy!</p>
+                    <a href="#products" class="hero-cta">GET CREAMY!</a>
+                </div>
+                <div class="hero-product-image hover-scale">
+                    <img src="./Natural.PNG" alt="Natural Yoghurt">
+                </div>
+            </div>
+            
+            <!-- Slide 2 - Strawberry -->
+            <div class="hero-slide" data-theme="strawberry">
+                <div class="hero-bg" style="background-image: url('https://imgs.search.brave.com/ym9hjjr4ElLmwypa7HYW19qqWRoah3L_m_vRpAfV-EA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDkzMDYw/OTAuanBn');"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">LUSCIOUS<br>STRAWBERRY<br>BLAST</h1>
+                    <p class="hero-subtitle">Berry deliciousness that'll make your tastebuds dance!</p>
+                    <a href="#products" class="hero-cta">GET SWEET!</a>
+                </div>
+                <div class="hero-product-image hover-scale">
+                    <img src="./StrawBerry.PNG" alt="Strawberry Yoghurt" style="transform: scale(1.2);">
+                </div>
+            </div>
+            
+            <!-- Slide 3 - Mango -->
+            <div class="hero-slide" data-theme="mango">
+                <div class="hero-bg" style="background-image: url('https://imgs.search.brave.com/rIzu8T_-kFUW5NXZKcxSWPcrCM7LIvxNUAs4_JdIMZM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvcmlw/ZS1hbmQtZnJlc2gt/bWFuZ28tZnJ1aXRz/LTQ4azFuMTc2cXhz/c3lqaWIuanBn');"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">TROPICAL<br>MANGO<br>VIBES</h1>
+                    <p class="hero-subtitle">Sunshine in a cup - vacation for your mouth!</p>
+                    <a href="#products" class="hero-cta">GET TROPICAL!</a>
+                </div>
+                <div class="hero-product-image hover-scale">
+                    <img src="./Mango.jpg" alt="Mango Yoghurt">
+                </div>
+            </div>
+            
+            <!-- Slide 4 - Banana -->
+            <div class="hero-slide" data-theme="banana">
+                <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80');"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">CREAMY<br>BANANA<br>DREAM</h1>
+                    <p class="hero-subtitle">Potassium-packed perfection that's unap-peel-able!</p>
+                    <a href="#products" class="hero-cta">GO BANANAS!</a>
+                </div>
+                <div class="hero-product-image hover-scale">
+                    <img src="./Banana.jpg" alt="Banana Yoghurt">
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-slider-nav">
+            <div class="slider-dot active" data-index="0"></div>
+            <div class="slider-dot" data-index="1"></div>
+            <div class="slider-dot" data-index="2"></div>
+            <div class="slider-dot" data-index="3"></div>
+        </div>
+        
+        <a href="#about" class="hero-scroll"><i class="fas fa-chevron-down"></i></a>
+        
+        <!-- Floating elements -->
+        <div class="floating-element" style="width: 120px; height: 120px; top: 15%; left: 5%;"></div>
+        <div class="floating-element" style="width: 180px; height: 180px; top: 65%; left: 85%;"></div>
+        <div class="floating-element" style="width: 80px; height: 80px; top: 35%; left: 75%;"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image hover-scale" style="background-image: url('https://holland-dairy.com/wp-content/uploads/2021/08/4a8dae76-fc2b-4893-831b-8d934cdfbdc5.jpg');"></div>
+            <div class="about-content">
+                <h2 class="about-title">Premium Quality Products</h2>
+                <p class="about-text">You and your family deserve the highest quality dairy products to support a happy and healthy life. At Holland Dairy, we're committed to quality throughout all steps of our supply chain from the raw milk we buy from local farmers and the manufacturing process to the packaging and the distribution.</p>
+                <p class="about-text">Each batch is carefully cultured to perfection using traditional Dutch methods, resulting in a creamy texture and distinctive taste that sets us apart from mass-produced alternatives. Our yoghurt contains billions of live cultures to support your gut health.</p>
+                <a href="#" class="hero-cta" style="background-color: var(--dark);">Our Story</a>
+            </div>
+        </div>
+    </section>
+    <!-- New Section with Image on Right -->
+<section class="about" id="tradition">
+    <div class="about-container">
+        <div class="about-content">
+            <h2 class="about-title">Locally Sourced</h2>
+            <p class="about-text">Ethiopian dairy farming plays an important role in the economy of many rural communities. To support Ethiopia and Ethiopians, we are dedicated to only sourcing our raw milk from local farms.</p>
+            <p class="about-text">More importantly, we’re focusing on smaller farms to help these local communities thrive.</p>
+            <a href="#" class="hero-cta" style="background-color: var(--dark);">Learn About Our Process</a>
+        </div>
+        <div class="about-image hover-scale" style="background-image: url('https://holland-dairy.com/wp-content/uploads/2021/08/pexels-cottonbro-4910769-1-1.jpg'); order: 2;"></div>
+    </div>
+</section>
+<!-- Add this CSS to your style section -->
+<style>
+    .full-width-feature {
+        padding: var(--section-padding);
+        background-color: var(--light);
+        position: relative;
+    }
+
+    .full-width-feature-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    .full-width-feature-image {
+        width: 100%;
+        height: 600px; /* Adjust height as needed */
+        border-radius: var(--border-radius);
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 3rem;
+        box-shadow: var(--card-shadow);
+        transition: var(--transition);
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    .full-width-feature-image.visible {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .full-width-feature-content {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    .full-width-feature-content.visible {
+        transform: translateY(0);
+        opacity: 1;
+        transition: var(--transition-slow);
+    }
+
+    .full-width-feature-text {
+        color: var(--text-light);
+        line-height: 1.7;
+        margin: 2rem 0;
+        font-size: var(--fluid-6);
+    }
+</style>
+
+<!-- Add this HTML where you want the section to appear -->
+<section class="full-width-feature" id="heritage">
+    <div class="full-width-feature-container">
+        <!-- Big rectangle image -->
+        <div class="full-width-feature-image" 
+             style="background-image: url('https://imgs.search.brave.com/b_rpCZiyqsK9y9Fi41VyNHFqREA69cK0s4Q6LqAbcOY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjU4/NDE4NDQ0L3Bob3Rv/L2Nvd3MtaW4tYS1m/YXJtLWRhaXJ5LWNv/d3MuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPUxYYVZmd1pX/LVM2TWZkdDJxMGRV/WlRWamhjSHpGLU85/eVI2R1lLSHdVclU9');">
+        </div>
+        
+        <!-- Text content below -->
+        <div class="full-width-feature-content">
+            <h2 class="section-title">Building a brighter tomorrow through dairy products.</h2>
+            <div class="full-width-feature-text">
+                <p>Holland Dairy is a leading dairy company in Ethiopia. We’re Ethiopian by nationality and Dutch by technology. </p>
+                <p>Our purpose is to provide a healthy and positive future for Ethiopians and their families. We believe that high-quality, fresh dairy sourced from local farms should be accessible to all Ethiopians.</p>
+            </div>
+            <a href="#" class="hero-cta" style="background-color: var(--dark); margin-top: 2rem;">Explore Our History</a>
+        </div>
+    </div>
+</section>
+
+<!-- Add this JavaScript at the end of your existing script -->
+<script>
+    // Observe the new section elements
+    const featureImage = document.querySelector('.full-width-feature-image');
+    const featureContent = document.querySelector('.full-width-feature-content');
+    
+    const featureObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    if (featureImage) featureObserver.observe(featureImage);
+    if (featureContent) featureObserver.observe(featureContent);
+</script>
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="section-header">
+            <h2 class="section-title">Our Premium Range</h2>
+            <p class="section-subtitle">Discover our selection of premium yoghurts, each crafted with care and the finest ingredients</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card hover-scale" data-theme="natural">
+                <div class="product-badge">Bestseller</div>
+                <div class="product-image-container">
+                    <div class="product-image-main" style="background-image: url('./Natural.PNG');"></div>
+                    <div class="product-image-hover" style="background-image: url('https://imgs.search.brave.com/QgmoZ2ipMKoAfuOFF6VKlFquQv0D5hBC_T3Q-KbwKwA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTQ1/MzQwMTU2L3Bob3Rv/L2Jvd2wtb2Ytd2hp/dGUteW9naHVydC13/aXRoLWJlcnJpZXMt/aXNvbGF0ZWQtb24t/d2hpdGUtYmFjLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz0z/RWUxdDU2QUcwd19F/Tlo3dDZweVBKNjhu/ei1CZ0RZdUpxM1NB/T3BqSExJPQ');"></div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Natural</h3>
+                    <p class="product-desc">We’ve perfected Ethiopian Yoghurt processing. Our Dutch manufacturing process takes the highest quality raw local milk and transforms it into a rich, tasty, creamy, and delicious yoghurt that our consumers can’t get enough of. The best part is that this Yoghurt is incredibly healthy!</p>
+                    <div class="product-footer">
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="product-card hover-scale" data-theme="strawberry">
+                <div class="product-image-container">
+                    <div class="product-image-main" style="background-image: url('./StrawBerry.PNG');"></div>
+                    <div class="product-image-hover" style="background-image: url('https://imgs.search.brave.com/ym9hjjr4ElLmwypa7HYW19qqWRoah3L_m_vRpAfV-EA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDkzMDYw/OTAuanBn');"></div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Strawberry</h3>
+                    <p class="product-desc">Luscious strawberries blended with our signature creamy yoghurt. Bursting with real fruit pieces and natural sweetness.</p>
+                </div>
+            </div>
+            <div class="product-card hover-scale" data-theme="mango">
+                <div class="product-image-container">
+                    <div class="product-image-main" style="background-image: url('./Mango.jpg');"></div>
+                    <div class="product-image-hover" style="background-image: url('https://imgs.search.brave.com/rIzu8T_-kFUW5NXZKcxSWPcrCM7LIvxNUAs4_JdIMZM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvcmlw/ZS1hbmQtZnJlc2gt/bWFuZ28tZnJ1aXRz/LTQ4azFuMTc2cXhz/c3lqaWIuanBn');"></div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Mango</h3>
+                    <p class="product-desc">Tropical mango flavor that transports you to sunnier climates. Made with real Alphonso mango puree for authentic taste.</p>
+                    <div class="product-footer">
+                     
+                    </div>
+                </div>
+            </div>
+            <div class="product-card hover-scale" data-theme="banana">
+                <div class="product-image-container">
+                    <div class="product-image-main" style="background-image: url('./Banana.jpg');"></div>
+                    <div class="product-image-hover" style="background-image: url('https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80');"></div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Banana</h3>
+                    <p class="product-desc">Creamy banana flavor packed with natural sweetness and potassium. A perfect post-workout snack or breakfast companion.</p>
+                    <div class="product-footer">
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values">
+        <div class="section-header">
+            <h2 class="section-title">Our Core Values</h2>
+            <p class="section-subtitle">What makes Holland Yoghurt special</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-card glass-card hover-scale">
+                <div class="value-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3 class="value-title">Natural Ingredients</h3>
+                <p class="value-text">We use only the finest natural ingredients with no artificial additives or preservatives. Every ingredient is carefully sourced for quality.</p>
+            </div>
+            <div class="value-card glass-card hover-scale">
+                <div class="value-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="value-title">Probiotic Rich</h3>
+                <p class="value-text">Our yoghurt contains live cultures that support digestive health and immunity. Each spoonful delivers billions of beneficial bacteria.</p>
+            </div>
+            <div class="value-card glass-card hover-scale">
+                <div class="value-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3 class="value-title">Sustainable</h3>
+                <p class="value-text">We're committed to eco-friendly practices from farm to packaging. Our dairy partners follow ethical and sustainable farming methods.</p>
+            </div>
+            <div class="value-card glass-card hover-scale">
+                <div class="value-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="value-title">Premium Quality</h3>
+                <p class="value-text">Each batch is carefully crafted to meet our exacting standards of excellence. We never compromise on quality or taste.</p>
+            </div>
+        </div>
+    </section>
+
+   <footer class="holland-footer">
+    <!-- Green Rhombus Pattern -->
+    <div class="footer-pattern"></div>
+    
+    <div class="footer-container">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+            <div class="footer-logo-text">
+                <img src="./Logo.PNG" alt="Holland Dairy"> Holland dairy
+            </div>
+            <p class="footer-description">
+                Holland Dairy is a leading dairy processing company in Ethiopia. We're Ethiopian by nationality and Dutch by technology.
+            </p>
+        </div>
+        
+        <!-- Important Links Column -->
+        <div class="footer-column">
+            <h3 class="footer-column-title">Important Links</h3>
+            <ul class="footer-links">
+                <li><a href="#">Food Safety Policy</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Our Products</a></li>
+            </ul>
+        </div>
+        
+        <!-- Empty Column for spacing -->
+        <div class="footer-column">
+            <!-- Empty space as shown in reference -->
+        </div>
+        
+        <!-- Contact Info Column -->
+        <div class="footer-column">
+            <h3 class="footer-column-title">Contact Info</h3>
+            <div class="footer-contact-item">
+                <div class="footer-contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <p class="footer-contact-text">Bishoftu, Ethiopia</p>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <p class="footer-contact-text">011 4711948</p>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <p class="footer-contact-text">info@holland-dairy.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        © <script>document.write(new Date().getFullYear())</script> Holland Dairy | All Rights Reserved.
+    </div>
+</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Custom cursor effect
+            const cursor = document.querySelector('.cursor');
+            const cursorFollower = document.querySelector('.cursor-follower');
+            
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                setTimeout(() => {
+                    cursorFollower.style.left = e.clientX + 'px';
+                    cursorFollower.style.top = e.clientY + 'px';
+                }, 80);
+            });
+            
+            document.querySelectorAll('a, button, .product-card, .slider-dot').forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(1.5)';
+                    cursorFollower.style.transform = 'scale(0.6)';
+                });
+                
+                element.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursorFollower.style.transform = 'scale(1)';
+                });
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Hero Slider functionality
+            const heroSlides = document.querySelectorAll('.hero-slide');
+            const sliderDots = document.querySelectorAll('.slider-dot');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                heroSlides.forEach(slide => slide.classList.remove('active'));
+                sliderDots.forEach(dot => dot.classList.remove('active'));
+                
+                heroSlides[index].classList.add('active');
+                sliderDots[index].classList.add('active');
+                currentSlide = index;
+                
+                // Change theme based on slide
+                const theme = heroSlides[index].getAttribute('data-theme');
+                changeTheme(theme);
+            }
+
+            function nextSlide() {
+                let nextIndex = (currentSlide + 1) % heroSlides.length;
+                showSlide(nextIndex);
+            }
+
+            sliderDots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    showSlide(parseInt(dot.getAttribute('data-index')));
+                    startSlideInterval();
+                });
+            });
+
+            function startSlideInterval() {
+                slideInterval = setInterval(nextSlide, 5000); // Change every 5 seconds
+            }
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                });
+            });
+
+            // Testimonial slider
+            const testimonials = document.querySelectorAll('.testimonial');
+            const dots = document.querySelectorAll('.testimonial-dot');
+            let currentTestimonial = 0;
+            let testimonialInterval;
+
+            function showTestimonial(index) {
+                testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                testimonials[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentTestimonial = index;
+            }
+
+            function nextTestimonial() {
+                let nextIndex = (currentTestimonial + 1) % testimonials.length;
+                showTestimonial(nextIndex);
+            }
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    clearInterval(testimonialInterval);
+                    showTestimonial(parseInt(dot.getAttribute('data-index')));
+                    startTestimonialInterval();
+                });
+            });
+
+            function startTestimonialInterval() {
+                testimonialInterval = setInterval(nextTestimonial, 6000);
+            }
+
+            // Theme changer function
+            function changeTheme(theme) {
+                document.body.className = ''; // Remove all theme classes
+                if (theme) {
+                    document.body.classList.add(`theme-${theme}`);
+                    
+                    // Update cursor color
+                    if (cursor) {
+                        cursor.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary');
+                    }
+                    
+                    // Update navbar elements
+                    const navbar = document.querySelector('.navbar');
+                    const logo = document.querySelector('.logo');
+                    const navLinks = document.querySelectorAll('.nav-links a');
+                    const menuToggle = document.querySelector('.menu-toggle span');
+                    
+                    if (navbar) {
+                        navbar.style.borderBottomColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-light');
+                    }
+                    
+                    // Update logo color based on theme
+                    if (logo) {
+                        logo.style.color = getComputedStyle(document.documentElement).getPropertyValue('--dark');
+                    }
+                    
+                    // Update nav links color
+                    navLinks.forEach(link => {
+                        link.style.color = getComputedStyle(document.documentElement).getPropertyValue('--dark');
+                    });
+                    
+                    // Update menu toggle color
+                    if (menuToggle) {
+                        menuToggle.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--dark');
+                    }
+                }
+            }
+
+            // Theme changer based on product hover
+            const productCards = document.querySelectorAll('.product-card');
+            const footerLinks = document.querySelectorAll('.footer-links a[data-theme]');
+            
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    const theme = card.getAttribute('data-theme');
+                    changeTheme(theme);
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    // Revert to current slide's theme when leaving product card
+                    const currentTheme = heroSlides[currentSlide].getAttribute('data-theme');
+                    changeTheme(currentTheme);
+                });
+
+                // Also change theme when clicked (for mobile)
+                card.addEventListener('click', () => {
+                    const theme = card.getAttribute('data-theme');
+                    changeTheme(theme);
+                });
+            });
+
+            footerLinks.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    const theme = link.getAttribute('data-theme');
+                    changeTheme(theme);
+                });
+
+                link.addEventListener('mouseleave', () => {
+                    // Revert to current slide's theme when leaving footer link
+                    const currentTheme = heroSlides[currentSlide].getAttribute('data-theme');
+                    changeTheme(currentTheme);
+                });
+            });
+
+            // Intersection Observer for animations
+            const animateElements = document.querySelectorAll(
+                '.hero-content, .hero-scroll, .product-card, .about-image, .about-content, .value-card, .newsletter-container'
+            );
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Product section intersection observer
+            const productSections = document.querySelectorAll('.product-card');
+            const productObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const theme = entry.target.getAttribute('data-theme');
+                        changeTheme(theme);
+                    }
+                });
+            }, {
+                threshold: 0.5,
+                rootMargin: '0px 0px -50% 0px'
+            });
+
+            productSections.forEach(section => {
+                productObserver.observe(section);
+            });
+
+            // Hero slide intersection observer
+            const heroSlideObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const theme = entry.target.getAttribute('data-theme');
+                        changeTheme(theme);
+                    }
+                });
+            }, {
+                threshold: 0.7
+            });
+
+            document.querySelectorAll('.hero-slide').forEach(slide => {
+                heroSlideObserver.observe(slide);
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Initialize
+            startSlideInterval();
+            startTestimonialInterval();
+            
+            // Set initial theme based on first slide
+            const initialTheme = heroSlides[0].getAttribute('data-theme');
+            changeTheme(initialTheme);
+        });
+    </script>
+</body>
+</html>
