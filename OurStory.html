@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | HOLLAND Premium Ethiopian Yoghurt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Mono+One&family=Press+Start+2P&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Modern 2025 color scheme */
+            --primary: #FF4D4D;
+            --primary-light: rgba(255, 77, 77, 0.1);
+            --primary-dark: #d63a3a;
+            --dark: #0A0A0A;
+            --darker: #050505;
+            --light: #FFFFFF;
+            --lighter: rgba(255,255,255,0.95);
+            --bg: #FAFAFA;
+            --text-color: #1A1A1A;
+            --text-light: rgba(26, 26, 26, 0.7);
+            --hero-text: #FFFFFF;
+            --section-padding: clamp(3rem, 6vw, 8rem) clamp(1.5rem, 4vw, 5rem);
+            --border-radius: 24px;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --glass-effect: rgba(255, 255, 255, 0.1);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+            --backdrop-filter: blur(16px);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-slow: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            --gradient-angle: 135deg;
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+            --max-width: 1440px;
+            --fluid-1: clamp(2rem, 6vw, 4rem);
+            --fluid-2: clamp(1.75rem, 5vw, 3.5rem);
+            --fluid-3: clamp(1.5rem, 4vw, 2.5rem);
+            --fluid-4: clamp(1.25rem, 3vw, 1.75rem);
+            --fluid-5: clamp(1rem, 2vw, 1.25rem);
+            --fluid-6: clamp(0.875rem, 1.5vw, 1rem);
+            --fluid-7: clamp(0.75rem, 1.2vw, 0.9rem);
+        }
+
+        /* Theme variations with modern color palettes */
+        .theme-natural {
+            --primary: #ebebeb;
+            --primary-dark: #14090c;
+            --primary-light: rgba(255, 107, 139, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(241, 241, 241, 0.9) 0%, rgba(230, 100, 130, 0.4) 100%);
+        }
+
+        .theme-strawberry {
+            --primary: #FF6B8B;
+            --primary-dark: #e05575;
+            --primary-light: rgba(255, 107, 139, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(190, 60, 90, 0.9) 0%, rgba(230, 100, 130, 0.4) 100%);
+        }
+
+        .theme-mango {
+            --primary: #FFA630;
+            --primary-dark: #e69520;
+            --primary-light: rgba(255, 166, 48, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(210, 120, 30, 0.9) 0%, rgba(240, 150, 50, 0.4) 100%);
+        }
+
+        .theme-banana {
+            --primary: #FFD166;
+            --primary-dark: #e6bc4d;
+            --primary-light: rgba(255, 209, 102, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(210, 170, 70, 0.9) 0%, rgba(240, 200, 100, 0.4) 100%);
+        }
+
+        .theme-blueberry {
+            --primary: #d7d56b;
+            --primary-dark: #c4c255;
+            --primary-light: rgba(186, 215, 107, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(169, 180, 70, 0.9) 0%, rgba(210, 208, 100, 0.4) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-color);
+            overflow-x: hidden;
+            transition: var(--transition-slow);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            font-size: var(--fluid-7);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            font-family: 'Syne', sans-serif;
+            letter-spacing: -0.03em;
+        }
+
+        h1 { font-size: var(--fluid-1); }
+        h2 { font-size: var(--fluid-2); }
+        h3 { font-size: var(--fluid-3); }
+        h4 { font-size: var(--fluid-4); }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Modern Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+            border: 2px solid var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Navigation - Ultra Modern 2025 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.2rem 5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: var(--transition);
+            background-color: rgba(255,255,255,0.98);
+            backdrop-filter: var(--backdrop-filter);
+            -webkit-backdrop-filter: var(--backdrop-filter);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+
+        .theme-natural .navbar,
+        .theme-strawberry .navbar,
+        .theme-mango .navbar,
+        .theme-banana .navbar,
+        .theme-blueberry .navbar {
+            background-color: rgba(255,255,255,0.98);
+            border-bottom: 1px solid var(--primary-light);
+        }
+
+        .logo {
+            font-size: var(--fluid-3);
+            font-weight: 800;
+            color: var(--dark);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo img {
+            height: clamp(32px, 4vw, 42px);
+            transition: var(--transition);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1.5rem, 3vw, 3rem);
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--fluid-6);
+            position: relative;
+            transition: var(--transition);
+            opacity: 0.9;
+            padding: 0.5rem 0;
+            font-family: 'Syne', sans-serif;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 1001;
+            position: relative;
+            width: 32px;
+            height: 32px;
+        }
+
+        .menu-toggle span {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 3px;
+        }
+
+        .menu-toggle span:nth-child(1) {
+            top: 6px;
+        }
+
+        .menu-toggle span:nth-child(2) {
+            top: 16px;
+        }
+
+        .menu-toggle span:nth-child(3) {
+            top: 26px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 16px;
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 16px;
+        }
+
+        /* Hero Section - Story Page */
+        .story-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 600px;
+            width: 100%;
+            overflow: hidden;
+            perspective: 1000px;
+            isolation: isolate;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(var(--gradient-angle), rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%), 
+                        url('https://holland-dairy.com/wp-content/uploads/2021/08/4a8dae76-fc2b-4893-831b-8d934cdfbdc5.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .story-hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 10vw;
+            color: var(--light);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .story-hero-title {
+            font-family: 'Syne', sans-serif;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+            text-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+            color: var(--light);
+            text-transform: uppercase;
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+            font-size: var(--fluid-1);
+        }
+
+        .story-hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+
+        .story-hero-subtitle {
+            font-family: 'Manrope', sans-serif;
+            margin-bottom: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            line-height: 1.4;
+            font-weight: 400;
+            opacity: 0.9;
+            font-size: var(--fluid-5);
+        }
+
+        /* About Section - Story Page */
+        .story-section {
+            padding: var(--section-padding);
+            background-color: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .story-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            transform: translateX(-60px) rotate(-5deg) translateZ(50px);
+            opacity: 0;
+            transition: var(--transition-slow);
+            position: relative;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        .story-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+
+        .story-image.visible {
+            transform: translateX(0) rotate(0deg) translateZ(0);
+            opacity: 1;
+        }
+
+        .story-content {
+            transform: translateX(60px) translateZ(50px);
+            opacity: 0;
+            transition: var(--transition-slow);
+            transform-style: preserve-3d;
+        }
+
+        .story-content.visible {
+            transform: translateX(0) translateZ(0);
+            opacity: 1;
+        }
+
+        .story-title {
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            position: relative;
+            display: inline-block;
+            font-weight: 800;
+        }
+
+        .story-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+
+        .story-text {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: var(--fluid-7);
+        }
+
+        /* Mission Section */
+        .mission-section {
+            padding: var(--section-padding);
+            background-color: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .mission-header {
+            margin-bottom: 3rem;
+        }
+
+        .mission-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .mission-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            transform: translateY(60px) scale(0.95) rotateX(15deg);
+            opacity: 0;
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+            will-change: transform;
+            text-align: center;
+        }
+
+        .mission-card.visible {
+            transform: translateY(0) scale(1) rotateX(0);
+            opacity: 1;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .mission-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            color: var(--primary);
+            font-size: 2rem;
+            transition: var(--transition);
+        }
+
+        .mission-card:hover .mission-icon {
+            transform: rotate(12deg) scale(1.1);
+            background-color: var(--primary);
+            color: var(--light);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .mission-card-title {
+            margin-bottom: 1.2rem;
+            color: var(--text-color);
+            transition: var(--transition-fast);
+            font-weight: 700;
+            font-size: var(--fluid-4);
+        }
+
+        .mission-card:hover .mission-card-title {
+            color: var(--primary);
+        }
+
+        .mission-card-text {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: var(--fluid-7);
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: var(--section-padding);
+            background-color: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .values-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .values-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .values-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .values-item {
+            margin-bottom: 1.5rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            background-color: var(--light);
+            transition: var(--transition);
+        }
+
+        .values-item-header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            background-color: var(--primary-light);
+            transition: var(--transition);
+        }
+
+        .values-item-header:hover {
+            background-color: var(--primary);
+        }
+
+        .values-item-header:hover .values-item-title {
+            color: var(--light);
+        }
+
+        .values-item-header:hover .values-item-icon {
+            color: var(--light);
+        }
+
+        .values-item-title {
+            font-weight: 700;
+            color: var(--text-color);
+            transition: var(--transition-fast);
+            font-size: var(--fluid-5);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .values-item-icon {
+            color: var(--primary);
+            transition: var(--transition);
+            font-size: 1.5rem;
+        }
+
+        .values-item-content {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .values-item.active .values-item-content {
+            padding: 2rem;
+            max-height: 500px;
+        }
+
+        .values-item-text {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: var(--fluid-7);
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: var(--section-padding);
+            background-color: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            transform: translateY(40px);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+
+        .timeline-item.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .timeline-item:nth-child(odd) {
+            padding-right: 50%;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            padding-left: 50%;
+            text-align: left;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            border: 4px solid var(--light);
+            box-shadow: 0 0 0 4px var(--primary-light);
+        }
+
+        .timeline-content {
+            padding: 1.5rem;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            position: relative;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: var(--fluid-5);
+        }
+
+        .timeline-title {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            font-weight: 700;
+            font-size: var(--fluid-5);
+        }
+
+        .timeline-text {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: var(--fluid-7);
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: var(--section-padding);
+            background-color: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            transform: translateY(60px) scale(0.95) rotateX(15deg);
+            opacity: 0;
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        .team-member.visible {
+            transform: translateY(0) scale(1) rotateX(0);
+            opacity: 1;
+        }
+
+        .team-member:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .team-member-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .team-member-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-member-name {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            font-weight: 700;
+            font-size: var(--fluid-5);
+        }
+
+        .team-member-role {
+            color: var(--primary);
+            font-size: var(--fluid-7);
+            margin-bottom: 1rem;
+        }
+
+        .team-member-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .team-member-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .team-member-social a:hover {
+            background-color: var(--primary);
+            color: var(--light);
+            transform: translateY(-3px);
+        }
+
+        /* Footer - Modern Dark */
+        .holland-footer {
+            background-color: #000000;
+            padding: 3rem 5vw 2rem;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .footer-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    rgba(1, 27, 1, 0.856),
+                    rgba(0, 0, 0, 0.712) 10px,
+                    transparent 10px,
+                    transparent 20px
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    rgba(0, 0, 0, 0.89),
+                    rgba(0, 0, 0, 0.692) 10px,
+                    transparent 10px,
+                    transparent 20px
+                );
+            z-index: 0;
+            animation: patternMove 20s linear infinite;
+        }
+
+        @keyframes patternMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 400px 400px; }
+        }
+
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 2rem;
+        }
+
+        .footer-brand {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo-text {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 28px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo-text img {
+            height: 36px;
+        }
+
+        .footer-description {
+            color: #ffffff;
+            line-height: 1.6;
+            font-size: 15px;
+            max-width: 300px;
+        }
+
+        .footer-column-title {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .footer-column-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #ffffff;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            padding-left: 5px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact-icon {
+            color: #ffffff;
+            font-size: 16px;
+            margin-top: 2px;
+        }
+
+        .footer-contact-text {
+            color: #ffffff;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgb(247, 240, 240);
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .story-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .story-image {
+                height: 400px;
+                order: -1;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding-left: 70px;
+                padding-right: 0;
+                text-align: left;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--dark);
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 2.5rem;
+                transform: translateX(100%);
+                transition: var(--transition);
+                z-index: 1000;
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                background-color: rgba(10,10,10,0.95);
+            }
+
+            .nav-links a {
+                color: rgba(255,255,255,0.9);
+            }
+
+            .nav-links a:hover {
+                color: var(--primary);
+            }
+
+            .theme-natural .nav-links a,
+            .theme-strawberry .nav-links a,
+            .theme-mango .nav-links a,
+            .theme-banana .nav-links a,
+            .theme-blueberry .nav-links a {
+                color: rgba(255,255,255,0.9);
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .mission-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-description {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .story-hero {
+                height: 60vh;
+                min-height: 500px;
+            }
+            
+            .story-hero-title {
+                font-size: var(--fluid-2);
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="./Logo.PNG" alt="Holland Yoghurt"></a>
+        <div class="nav-links">
+            <a href="./Index.html">Home</a>
+            <a href="./Products.html">Products</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./ourstory.html">Our Story</a>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Story Page -->
+    <section class="story-hero">
+        <div class="story-hero-content">
+            <h1 class="story-hero-title">Our Story</h1>
+            <p class="story-hero-subtitle">From humble beginnings to becoming Ethiopia's premier dairy brand</p>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="story-section">
+        <div class="story-container">
+            <div class="story-image" style="background-image: url('https://holland-dairy.com/wp-content/uploads/2021/09/Untitled-1-1.png');"></div>
+            <div class="story-content">
+                <h2 class="story-title">Who We Are</h2>
+                <p class="story-text">Holland Dairy is a leading provider of high-quality dairy products in the entire country of Ethiopia. We're most famous for our yoghurt and milk, but our identity goes much deeper. Our milk is sourced locally, and only the best gets selected to ensure high-quality raw milk inputs. We strive to build a thriving Ethiopian agricultural sector and most of our main suppliers are smallholder farms.</p>
+                <p class="story-text">Our team is passionate about the people of Ethiopia and cares immensely about their well-being. We seek to alleviate some of the food insecurity in the country by growing the Ethiopian dairy sector. This industry is of vital importance to rural and urban economic development.</p>
+                <p class="story-text">At Holland Dairy, we're seeking to help modernize this valuable sector to help increase the living standards of those involved in the work while increasing the health of all who benefit from locally sourced and high-quality dairy products. By using small farms, we're ensuring funds remain within the community to create quicker growth and development. We've been able to boost the living standards of our community and make consumers happy. That's success to us!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="mission-container">
+            <div class="mission-header">
+                <h2 class="story-title">Our Mission & Vision</h2>
+                <p class="story-text">Guiding principles that drive everything we do</p>
+            </div>
+            
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="mission-card-title">Our Mission</h3>
+                    <p class="mission-card-text">Our purpose is to provide a healthy and positive future for Ethiopians and their families. We believe that high-quality, fresh dairy products sourced from local farms should be accessible to all Ethiopians.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="mission-card-title">Our Vision</h3>
+                    <p class="mission-card-text">At Holland Dairy, we envision a brighter future for Ethiopia. It's our aim to unlock the full potential of Ethiopia's hands, head, and heart.</p>
+                </div>
+            </div>
+            
+            <div class="mission-cards" style="margin-top: 2rem;">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="mission-card-title">Hands</h3>
+                    <p class="mission-card-text">We strive to build a thriving Ethiopian agricultural sector.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="mission-card-title">Head</h3>
+                    <p class="mission-card-text">Our nutritious and high-quality dairy products will improve the health of Ethiopians no matter their age.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="mission-card-title">Heart</h3>
+                    <p class="mission-card-text">We aim to create brands and products that make Ethiopians proud.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="values-container">
+            <div class="values-header">
+                <h2 class="story-title">Our Values</h2>
+                <p class="story-text">At Holland Dairy, we're guided by our core values that influence everything we do. These values ensure we remain true to our mission.</p>
+            </div>
+            
+            <div class="values-accordion">
+                <div class="values-item">
+                    <div class="values-item-header">
+                        <h3 class="values-item-title"><i class="fas fa-star values-item-icon"></i> Quality</h3>
+                        <i class="fas fa-chevron-down values-item-icon"></i>
+                    </div>
+                    <div class="values-item-content">
+                        <p class="values-item-text">You and your family deserve the highest quality dairy products to support a happy and healthy life. At Holland Dairy, we're committed to quality throughout all steps of our supply chain from the raw milk we buy from local farmers and the manufacturing process to the packaging and the distribution. We ensure full compliance and sustainability before sourcing milk from any Ethiopian dairy farm, as well as conduct continued quality checks to ensure our premium quality. As a result, Holland Dairy is known to be the leading quality dairy brand in Ethiopia.</p>
+                    </div>
+                </div>
+                
+                <div class="values-item">
+                    <div class="values-item-header">
+                        <h3 class="values-item-title"><i class="fas fa-eye values-item-icon"></i> Transparency</h3>
+                        <i class="fas fa-chevron-down values-item-icon"></i>
+                    </div>
+                    <div class="values-item-content">
+                        <p class="values-item-text">Everyone has the right to know where their food originated. That's why we remain open and honest about our entire operation. We're transparent about the farms we work with, the manufacturing we use, the packaging we choose, and all other steps of our process. This way, you can always be assured that what you and your family are consuming is the best of the best.</p>
+                    </div>
+                </div>
+                
+                <div class="values-item">
+                    <div class="values-item-header">
+                        <h3 class="values-item-title"><i class="fas fa-leaf values-item-icon"></i> Sustainability</h3>
+                        <i class="fas fa-chevron-down values-item-icon"></i>
+                    </div>
+                    <div class="values-item-content">
+                        <p class="values-item-text">The world has given us everything, and we have a duty to preserve it for future generations. At Holland Dairy, we're conscious of how our operations can impact the environment. We're constantly looking for new ways to reduce emissions, increase energy efficiency, and increase the sustainability of our operations overall.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="timeline-container">
+            <div class="timeline-header">
+                <h2 class="story-title">Our Journey</h2>
+                <p class="story-text">Milestones that shaped Holland Dairy</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010</div>
+                        <h3 class="timeline-title">Founding of Holland Dairy</h3>
+                        <p class="timeline-text">Established with a vision to revolutionize Ethiopia's dairy industry by combining Dutch technology with local Ethiopian resources.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2012</div>
+                        <h3 class="timeline-title">First Production Facility</h3>
+                        <p class="timeline-text">Opened our first state-of-the-art production facility in Bishoftu, equipped with modern Dutch dairy processing technology.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <h3 class="timeline-title">National Distribution</h3>
+                        <p class="timeline-text">Expanded distribution network to cover all major cities across Ethiopia, making our products accessible nationwide.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2018</div>
+                        <h3 class="timeline-title">Quality Certification</h3>
+                        <p class="timeline-text">Achieved international quality certifications, validating our commitment to world-class standards in dairy production.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021</div>
+                        <h3 class="timeline-title">Smallholder Partnership Program</h3>
+                        <p class="timeline-text">Launched initiative to partner with 500+ smallholder farms, boosting local economies and ensuring premium milk quality.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <h3 class="timeline-title">Market Leadership</h3>
+                        <p class="timeline-text">Recognized as Ethiopia's leading dairy brand, with the highest customer satisfaction ratings in the industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="holland-footer">
+        <!-- Green Rhombus Pattern -->
+        <div class="footer-pattern"></div>
+        
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <div class="footer-logo-text">
+                    <img src="./Logo.PNG" alt="Holland Dairy"> Holland dairy
+                </div>
+                <p class="footer-description">
+                    Holland Dairy is a leading dairy processing company in Ethiopia. We're Ethiopian by nationality and Dutch by technology.
+                </p>
+            </div>
+            
+            <!-- Important Links Column -->
+            <div class="footer-column">
+                <h3 class="footer-column-title">Important Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Food Safety Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Our Products</a></li>
+                </ul>
+            </div>
+            
+            <!-- Empty Column for spacing -->
+            <div class="footer-column">
+                <!-- Empty space as shown in reference -->
+            </div>
+            
+            <!-- Contact Info Column -->
+            <div class="footer-column">
+                <h3 class="footer-column-title">Contact Info</h3>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <p class="footer-contact-text">Bishoftu, Ethiopia</p>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <p class="footer-contact-text">011 4711948</p>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <p class="footer-contact-text">info@holland-dairy.com</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            © <script>document.write(new Date().getFullYear())</script> Holland Dairy | All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Custom cursor effect
+            const cursor = document.querySelector('.cursor');
+            const cursorFollower = document.querySelector('.cursor-follower');
+            
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                setTimeout(() => {
+                    cursorFollower.style.left = e.clientX + 'px';
+                    cursorFollower.style.top = e.clientY + 'px';
+                }, 80);
+            });
+            
+            document.querySelectorAll('a, button, .product-card, .slider-dot').forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(1.5)';
+                    cursorFollower.style.transform = 'scale(0.6)';
+                });
+                
+                element.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursorFollower.style.transform = 'scale(1)';
+                });
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                });
+            });
+
+            // Values accordion functionality
+            const valuesItems = document.querySelectorAll('.values-item');
+            
+            valuesItems.forEach(item => {
+                const header = item.querySelector('.values-item-header');
+                
+                header.addEventListener('click', () => {
+                    const currentlyActive = document.querySelector('.values-item.active');
+                    
+                    // If this item is already active, close it
+                    if (item.classList.contains('active')) {
+                        item.classList.remove('active');
+                        return;
+                    }
+                    
+                    // Close any other active items
+                    if (currentlyActive) {
+                        currentlyActive.classList.remove('active');
+                    }
+                    
+                    // Open this item
+                    item.classList.add('active');
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
+            const animateElements = document.querySelectorAll(
+                '.story-image, .story-content, .mission-card, .timeline-item, .team-member, .values-item'
+            );
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
