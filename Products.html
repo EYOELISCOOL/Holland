@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOLLAND | Our Premium Dairy Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Mono+One&family=Press+Start+2P&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== ROOT VARIABLES ===== */
+        :root {
+            /* Modern 2025 color scheme - Dark Theme */
+            --primary: #FF4D4D;
+            --primary-light: rgba(255, 77, 77, 0.15);
+            --primary-dark: #d63a3a;
+            --dark: #0A0A0A;
+            --darker: #050505;
+            --light: #FFFFFF;
+            --lighter: rgba(255,255,255,0.95);
+            --bg: #0A0A0A;
+            --bg-light: rgba(20, 20, 20, 0.8);
+            --text-color: #FFFFFF;
+            --text-light: rgba(255, 255, 255, 0.7);
+            --hero-text: #FFFFFF;
+            --section-padding: clamp(3rem, 6vw, 8rem) clamp(1.5rem, 4vw, 5rem);
+            --border-radius: 24px;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --glass-effect: rgba(255, 255, 255, 0.1);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+            --backdrop-filter: blur(16px);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-slow: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            --gradient-angle: 135deg;
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+            --max-width: 1440px;
+            --fluid-1: clamp(2rem, 6vw, 4rem);
+            --fluid-2: clamp(1.75rem, 5vw, 3.5rem);
+            --fluid-3: clamp(1.5rem, 4vw, 2.5rem);
+            --fluid-4: clamp(1.25rem, 3vw, 1.75rem);
+            --fluid-5: clamp(1rem, 2vw, 1.25rem);
+            --fluid-6: clamp(0.875rem, 1.5vw, 1rem);
+            --fluid-7: clamp(0.75rem, 1.2vw, 0.9rem);
+            --neon-glow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+            --neon-glow-light: 0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5);
+            --holographic-gradient: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
+        }
+
+        /* ===== THEME VARIATIONS ===== */
+        .theme-natural {
+            --primary: #ebebeb;
+            --primary-dark: #c4c4c4;
+            --primary-light: rgba(235, 235, 235, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(10, 10, 10, 0.9) 0%, rgba(50, 50, 50, 0.4) 100%);
+            --neon-glow: 0 0 15px rgba(235,235,235,0.7), 0 0 30px rgba(235,235,235,0.4);
+        }
+
+        .theme-strawberry {
+            --primary: #FF6B8B;
+            --primary-dark: #e05575;
+            --primary-light: rgba(255, 107, 139, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(60, 10, 20, 0.9) 0%, rgba(100, 30, 50, 0.4) 100%);
+            --neon-glow: 0 0 15px rgba(255,107,139,0.7), 0 0 30px rgba(255,107,139,0.4);
+        }
+
+        .theme-mango {
+            --primary: #FFA630;
+            --primary-dark: #e69520;
+            --primary-light: rgba(255, 166, 48, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(60, 40, 10, 0.9) 0%, rgba(100, 60, 20, 0.4) 100%);
+            --neon-glow: 0 0 15px rgba(255,166,48,0.7), 0 0 30px rgba(255,166,48,0.4);
+        }
+
+        .theme-banana {
+            --primary: #FFD166;
+            --primary-dark: #e6bc4d;
+            --primary-light: rgba(255, 209, 102, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(60, 50, 10, 0.9) 0%, rgba(100, 80, 20, 0.4) 100%);
+            --neon-glow: 0 0 15px rgba(255,209,102,0.7), 0 0 30px rgba(255,209,102,0.4);
+        }
+
+        .theme-blueberry {
+            --primary: #d7d56b;
+            --primary-dark: #c4c255;
+            --primary-light: rgba(186, 215, 107, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(40, 40, 20, 0.9) 0%, rgba(70, 70, 40, 0.4) 100%);
+            --neon-glow: 0 0 15px rgba(215,213,107,0.7), 0 0 30px rgba(215,213,107,0.4);
+        }
+
+        .theme-milk {
+            --primary: #a8d8ea;
+            --primary-dark: #86c5da;
+            --primary-light: rgba(168, 216, 234, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(20, 40, 50, 0.9) 0%, rgba(40, 70, 90, 0.4) 100%);
+            --neon-glow: 0 0 15px rgba(168,216,234,0.7), 0 0 30px rgba(168,216,234,0.4);
+        }
+
+        .theme-cheese {
+            --primary: #f8e58c;
+            --primary-dark: #f5dc6b;
+            --primary-light: rgba(248, 229, 140, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(50, 45, 20, 0.9) 0%, rgba(80, 70, 40, 0.4) 100%);
+            --neon-glow: 0 0 15px rgba(248,229,140,0.7), 0 0 30px rgba(248,229,140,0.4);
+        }
+
+        /* ===== BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-color);
+            overflow-x: hidden;
+            transition: var(--transition-slow);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            font-size: var(--fluid-7);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(30, 30, 30, 0.9) 0%, transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(40, 40, 40, 0.7) 0%, transparent 25%);
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            font-family: 'Syne', sans-serif;
+            letter-spacing: -0.03em;
+        }
+
+        h1 { font-size: var(--fluid-1); }
+        h2 { font-size: var(--fluid-2); }
+        h3 { font-size: var(--fluid-3); }
+        h4 { font-size: var(--fluid-4); }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.2rem 5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: var(--transition);
+            background-color: rgba(10,10,10,0.8);
+            backdrop-filter: var(--backdrop-filter);
+            -webkit-backdrop-filter: var(--backdrop-filter);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            font-size: var(--fluid-3);
+            font-weight: 800;
+            color: var(--light);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo img {
+            height: clamp(32px, 4vw, 42px);
+            transition: var(--transition);
+            filter: drop-shadow(var(--neon-glow-light));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1.5rem, 3vw, 3rem);
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--fluid-6);
+            position: relative;
+            transition: var(--transition);
+            opacity: 0.9;
+            padding: 0.5rem 0;
+            font-family: 'Syne', sans-serif;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+            border-radius: 2px;
+            box-shadow: var(--neon-glow-light);
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+            text-shadow: var(--neon-glow);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+            box-shadow: var(--neon-glow);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 2px;
+            background-color: var(--light);
+            transition: var(--transition);
+            border-radius: 3px;
+            box-shadow: var(--neon-glow-light);
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ===== SEARCH BAR ===== */
+        .search-container {
+            position: relative;
+            margin: 2rem auto;
+            max-width: 800px;
+            width: 90%;
+            z-index: 10;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 1.2rem 2rem;
+            border-radius: 50px;
+            border: none;
+            background-color: rgba(20, 20, 20, 0.6);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            font-size: var(--fluid-6);
+            font-family: 'Manrope', sans-serif;
+            transition: var(--transition);
+            padding-right: 4rem;
+            color: var(--text-color);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .search-bar:focus {
+            outline: none;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4), var(--neon-glow-light);
+            transform: translateY(-2px);
+            background-color: rgba(30, 30, 30, 0.8);
+        }
+
+        .search-bar::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            font-size: 1.2rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            font-size: var(--fluid-4);
+            color: var(--text-light);
+            display: none;
+        }
+
+        /* ===== PRODUCTS HERO ===== */
+        .products-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 600px;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('https://holland-dairy.com/wp-content/uploads/2021/08/49c28b71-06df-420e-8bc5-84e5fc030c8c.jpg') no-repeat center center;
+            background-size: cover;
+            color: var(--hero-text);
+            isolation: isolate;
+        }
+
+        .products-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--hero-gradient);
+            z-index: 1;
+        }
+
+        .products-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .products-hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 10vw;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .products-hero-title {
+            font-size: var(--fluid-1);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.5), var(--neon-glow);
+            position: relative;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .products-hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 3px;
+            box-shadow: var(--neon-glow);
+        }
+
+        .products-hero-subtitle {
+            font-size: var(--fluid-5);
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== PRODUCT GRID ===== */
+        .products-main {
+            padding: var(--section-padding);
+            position: relative;
+        }
+
+        .products-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .product-category {
+            margin-bottom: 6rem;
+        }
+
+        .product-category-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .product-category-title {
+            font-size: var(--fluid-2);
+            margin-bottom: 1.5rem;
+            position: relative;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .product-category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 3px;
+            box-shadow: var(--neon-glow);
+        }
+
+        .product-category-description {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-light);
+            font-size: var(--fluid-6);
+        }
+
+        .modern-product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .modern-product-card {
+            background: rgba(20, 20, 20, 0.6);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            transform: translateY(60px);
+            opacity: 0;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: relative;
+            isolation: isolate;
+        }
+
+        .modern-product-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--holographic-gradient);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .modern-product-card.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .modern-product-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), var(--neon-glow);
+        }
+
+        .modern-product-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .modern-product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            z-index: 3;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            text-transform: uppercase;
+            text-shadow: none;
+        }
+
+        .modern-product-media {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        .modern-product-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: var(--transition-slow);
+        }
+
+        .modern-product-image-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+
+        /* Remove hover image switch for milk, cheese and butter */
+        .modern-product-card[data-name="Milk"] .modern-product-image-hover,
+        .modern-product-card[data-name="Cheese"] .modern-product-image-hover,
+        .modern-product-card[data-name="Butter"] .modern-product-image-hover {
+            display: none !important;
+        }
+
+        .modern-product-card:not([data-name="Milk"]):not([data-name="Cheese"]):not([data-name="Butter"]):hover .modern-product-image {
+            opacity: 0;
+            transform: scale(1.1);
+        }
+
+        .modern-product-card:not([data-name="Milk"]):not([data-name="Cheese"]):not([data-name="Butter"]):hover .modern-product-image-hover {
+            opacity: 1;
+            transform: scale(1.08);
+        }
+
+        .modern-product-info {
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+            background-color: transparent;
+        }
+
+        .modern-product-name {
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+            transition: var(--transition-fast);
+            font-size: var(--fluid-4);
+            font-weight: 800;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .modern-product-card:hover .modern-product-name {
+            color: var(--primary);
+            text-shadow: var(--neon-glow);
+        }
+
+        .modern-product-desc {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            font-size: var(--fluid-7);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .modern-product-features {
+            margin-bottom: 1.5rem;
+        }
+
+        .modern-product-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: var(--fluid-7);
+        }
+
+        .modern-product-feature i {
+            color: var(--primary);
+            margin-right: 0.5rem;
+            font-size: 1rem;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        /* ===== NUTRITIONAL INFO ===== */
+        .nutritional-info {
+            background-color: rgba(30, 30, 30, 0.6);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .nutritional-title {
+            font-size: var(--fluid-6);
+            margin-bottom: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .nutritional-title i {
+            margin-right: 0.5rem;
+        }
+
+        .nutritional-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 1rem;
+        }
+
+        .nutritional-item {
+            text-align: center;
+        }
+
+        .nutritional-value {
+            font-size: var(--fluid-5);
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .nutritional-label {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== PRODUCT BENEFITS ===== */
+        .product-benefits {
+            margin-top: 1.5rem;
+        }
+
+        .benefits-title {
+            font-size: var(--fluid-6);
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .benefit-icon {
+            color: var(--primary);
+            font-size: 1rem;
+            margin-top: 0.2rem;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .benefit-text {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        /* ===== PRODUCT FOOTER ===== */
+        .modern-product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .modern-product-price {
+            font-size: var(--fluid-5);
+            font-weight: 800;
+            color: var(--primary);
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .modern-product-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.8rem;
+            background-color: var(--primary);
+            color: var(--dark);
+            border-radius: 50px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            font-family: 'Syne', sans-serif;
+            font-size: var(--fluid-7);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3), var(--neon-glow-light);
+            border: none;
+            cursor: pointer;
+        }
+
+        .modern-product-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: var(--transition-slow);
+        }
+
+        .modern-product-cta:hover {
+            background-color: var(--light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4), var(--neon-glow);
+        }
+
+        .modern-product-cta:hover::before {
+            left: 100%;
+        }
+
+        /* ===== FLOATING ELEMENTS ===== */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            animation: float 15s infinite ease-in-out;
+            z-index: 0;
+            box-shadow: var(--neon-glow-light);
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg) translateZ(0); }
+            25% { transform: translate(15px, 15px) rotate(5deg) translateZ(15px); }
+            50% { transform: translate(-15px, 8px) rotate(-5deg) translateZ(8px); }
+            75% { transform: translate(8px, -15px) rotate(3deg) translateZ(12px); }
+        }
+
+        /* ===== MODERN FOOTER (From FoodSafetyPolicy) ===== */
+        .holland-footer {
+            background-color: #000000;
+            padding: 5rem 5vw 3rem;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Syne', sans-serif;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            transition: var(--transition-slow);
+        }
+
+        .footer-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    rgba(255,77,77,0.1),
+                    rgba(255,77,77,0.05) 10px,
+                    transparent 10px,
+                    transparent 20px
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    rgba(255,77,77,0.1),
+                    rgba(255,77,77,0.05) 10px,
+                    transparent 10px,
+                    transparent 20px
+                );
+            z-index: 0;
+            animation: patternMove 20s linear infinite;
+        }
+
+        @keyframes patternMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 400px 400px; }
+        }
+
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+        }
+
+        .footer-brand {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo-text {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 2.5rem;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: var(--neon-glow);
+        }
+
+        .footer-logo-text img {
+            height: 50px;
+            filter: drop-shadow(0 0 10px rgba(255,77,77,0.5));
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(255,77,77,0.5)); }
+            100% { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(255,77,77,0.8)); }
+        }
+
+        .footer-description {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-size: 1.1rem;
+            max-width: 400px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column-title {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-size: 1.4rem;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .footer-column-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 3px;
+            transition: var(--transition);
+            box-shadow: var(--neon-glow);
+        }
+
+        .footer-column:hover .footer-column-title::after {
+            width: 70px;
+            background-color: #ffffff;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+            transform: translateX(0);
+            transition: var(--transition);
+        }
+
+        .footer-links li:hover {
+            transform: translateX(10px);
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a::before {
+            content: '→';
+            color: var(--primary);
+            opacity: 0;
+            transition: var(--transition);
+            text-shadow: var(--neon-glow);
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            padding-left: 5px;
+            text-shadow: var(--neon-glow);
+        }
+
+        .footer-links a:hover::before {
+            opacity: 1;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .footer-contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .footer-contact-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 3px;
+            transition: var(--transition);
+            text-shadow: var(--neon-glow);
+        }
+
+        .footer-contact-item:hover .footer-contact-icon {
+            transform: scale(1.2);
+        }
+
+        .footer-contact-text {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        /* Social Media Icons */
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: var(--neon-glow-light);
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: var(--transition-slow);
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px) rotate(10deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2), var(--neon-glow);
+        }
+
+        .social-icon:hover::before {
+            left: 100%;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Floating elements in footer */
+        .footer-floating {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,77,77,0.05);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            animation: float 15s infinite ease-in-out;
+            z-index: 0;
+            box-shadow: var(--neon-glow-light);
+        }
+
+        .floating-1 {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-2 {
+            width: 200px;
+            height: 200px;
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-3 {
+            width: 100px;
+            height: 100px;
+            top: 30%;
+            right: 20%;
+            animation-delay: 4s;
+        }
+
+        /* Particle Animation */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background-color: rgba(255,77,77,0.3);
+            border-radius: 50%;
+            animation: particle-float linear infinite;
+        }
+
+        @keyframes particle-float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Cursor Effects */
+        .cursor {
+            position: fixed;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.15s ease;
+            display: none;
+            box-shadow: var(--neon-glow);
+        }
+
+        .cursor-follower {
+            position: fixed;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: rgba(255, 77, 77, 0.2);
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease, width 0.2s ease, height 0.2s ease;
+            display: none;
+            box-shadow: var(--neon-glow-light);
+        }
+
+        /* 2025 Modern Additions */
+        .glow-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, var(--primary-light), transparent 70%);
+            opacity: 0.4;
+            z-index: -1;
+            pointer-events: none;
+            animation: glowPulse 8s infinite alternate;
+        }
+
+        @keyframes glowPulse {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.5; }
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hover-scale {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+
+        /* Liquid Morph Effect */
+        .liquid-morph {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .liquid-morph::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--holographic-gradient);
+            z-index: 1;
+            opacity: 0.3;
+            transition: var(--transition-slow);
+        }
+
+        .liquid-morph:hover::before {
+            transform: translateX(100%);
+        }
+
+        /* Holographic Card Effect */
+        .holographic-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .holographic-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: var(--holographic-gradient);
+            transform: rotate(45deg);
+            opacity: 0.1;
+            transition: var(--transition-slow);
+            z-index: 1;
+        }
+
+        .holographic-card:hover::after {
+            transform: rotate(45deg) translateX(100%);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .modern-product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 280px;
+                height: 100vh;
+                background-color: rgba(10,10,10,0.95);
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 2.5rem;
+                transform: translateX(100%);
+                transition: var(--transition);
+                z-index: 1000;
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+            }
+
+            .nav-links a {
+                color: rgba(255,255,255,0.9);
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .products-hero {
+                height: 60vh;
+                min-height: 500px;
+            }
+            
+            .modern-product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-logo-text {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .products-hero {
+                height: 50vh;
+                min-height: 450px;
+            }
+            
+            .modern-product-media {
+                height: 220px;
+            }
+            
+            .footer-logo-text {
+                font-size: 1.8rem;
+            }
+            
+            .footer-column-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .cursor, .cursor-follower {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="theme-natural">
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="./Logo.PNG" alt="Holland Yoghurt"></a>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./products.html">Products</a>
+            <a href="./Contact.html">Contact</a>
+            <a href="./Ourstory.html">Our Story</a>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Products Hero Section -->
+    <section class="products-hero">
+        <div class="glow-effect"></div>
+        <div class="products-hero-content">
+            <h1 class="products-hero-title">Our Premium Dairy Range</h1>
+            <p class="products-hero-subtitle">Discover our selection of premium dairy products, each crafted with care and the finest ingredients to deliver exceptional taste and quality.</p>
+            
+            <!-- Floating elements -->
+            <div class="floating-element" style="width: 120px; height: 120px; top: 15%; left: 5%;"></div>
+            <div class="floating-element" style="width: 180px; height: 180px; top: 65%; left: 85%;"></div>
+            <div class="floating-element" style="width: 80px; height: 80px; top: 35%; left: 75%;"></div>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search products...">
+        <i class="fas fa-search search-icon"></i>
+    </div>
+    <div class="no-results">No products found matching your search.</div>
+
+    <!-- Main Products Content -->
+    <main class="products-main" id="products">
+        <div class="products-container">
+            <!-- Natural Yoghurt -->
+            <section class="product-category" data-category="yoghurt">
+                <header class="product-category-header">
+                    <h2 class="product-category-title">Natural Yoghurt</h2>
+                    <p class="product-category-description">Our signature natural yoghurt is the foundation of all our products, crafted with traditional Dutch methods for exceptional creaminess and probiotic benefits.</p>
+                </header>
+                
+                <div class="modern-product-grid">
+                    <article class="modern-product-card" data-theme="natural" data-name="Natural Premium" data-tags="yoghurt natural probiotic">
+                        <div class="modern-product-badge">Bestseller</div>
+                        <div class="modern-product-media">
+                            <div class="modern-product-image" style="background-image: url('./Natural.PNG');"></div>
+                            <div class="modern-product-image-hover" style="background-image: url('https://imgs.search.brave.com/QgmoZ2ipMKoAfuOFF6VKlFquQv0D5hBC_T3Q-KbwKwA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTQ1/MzQwMTU2L3Bob3Rv/L2Jvd2wtb2Ytd2hp/dGUteW9naHVydC13/aXRoLWJlcnJpZXMt/aXNvbGF0ZWQtb24t/d2hpdGUtYmFjLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz0z/RWUxdDU2QUcwd19F/Tlo3dDZweVBKNjhu/ei1CZ0RZdUpxM1NB/T3BqSExJPQ');"></div>
+                        </div>
+                        <div class="modern-product-info">
+                            <h3 class="modern-product-name">Natural Premium</h3>
+                            <p class="modern-product-desc">We've perfected Ethiopian Yoghurt processing. Our Dutch manufacturing process transforms the highest quality raw local milk into a rich, tasty, creamy, and delicious yoghurt that our consumers can't get enough of.</p>
+                            
+                            <div class="modern-product-features">
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Rich in probiotics</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>No artificial additives</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>High protein content</span>
+                                </div>
+                            </div>
+                            
+                           
+                            
+                            <div class="product-benefits">
+                                <h4 class="benefits-title">Health Benefits</h4>
+                                <div class="benefits-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-heart benefit-icon"></i>
+                                        <p class="benefit-text">Supports digestive health with live cultures</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-bone benefit-icon"></i>
+                                        <p class="benefit-text">Excellent source of calcium for strong bones</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-shield-virus benefit-icon"></i>
+                                        <p class="benefit-text">Boosts immune system function</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modern-product-footer">
+                        
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- Flavored Yoghurts -->
+            <section class="product-category" data-category="yoghurt">
+                <header class="product-category-header">
+                    <h2 class="product-category-title">Flavored Varieties</h2>
+                    <p class="product-category-description">Our flavored yoghurts combine the goodness of our natural base with delicious fruit flavors for a delightful taste experience.</p>
+                </header>
+                
+                <div class="modern-product-grid">
+                    <!-- Strawberry -->
+                    <article class="modern-product-card" data-theme="strawberry" data-name="Strawberry Bliss" data-tags="yoghurt strawberry fruit flavored">
+                        <div class="modern-product-media">
+                            <div class="modern-product-image" style="background-image: url('./StrawBerry.PNG');"></div>
+                            <div class="modern-product-image-hover" style="background-image: url('https://imgs.search.brave.com/ym9hjjr4ElLmwypa7HYW19qqWRoah3L_m_vRpAfV-EA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDkzMDYw/OTAuanBn');"></div>
+                        </div>
+                        <div class="modern-product-info">
+                            <h3 class="modern-product-name">Strawberry Bliss</h3>
+                            <p class="modern-product-desc">Luscious strawberries blended with our signature creamy yoghurt. Bursting with real fruit pieces and natural sweetness for a delightful berry experience.</p>
+                            
+                            <div class="modern-product-features">
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Real strawberry pieces</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>No artificial colors</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Vitamin rich</span>
+                                </div>
+                            </div>
+                            
+                            <div class="nutritional-info">
+                                <h4 class="nutritional-title"><i class="fas fa-chart-pie"></i> Nutritional Info (per 100g)</h4>
+                                <div class="nutritional-grid">
+                                    <div class="nutritional-item">
+                                        <div class="nutritional-value">2.3g</div>
+                                        <div class="nutritional-label">Protein</div>
+                                    </div>
+                                    <div class="nutritional-item">
+                                        <div class="nutritional-value">2.5g</div>
+                                        <div class="nutritional-label">Fat</div>
+                                    </div>
+                                    <div class="nutritional-item">
+                                        <div class="nutritional-value">14g</div>
+                                        <div class="nutritional-label">Carbs</div>
+                                    </div>
+                                    <div class="nutritional-item">
+                                        <div class="nutritional-value">88</div>
+                                        <div class="nutritional-label">Calories</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-benefits">
+                                <h4 class="benefits-title">Health Benefits</h4>
+                                <div class="benefits-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-heart benefit-icon"></i>
+                                        <p class="benefit-text">Rich in antioxidants from real strawberries</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-brain benefit-icon"></i>
+                                        <p class="benefit-text">Supports cognitive function</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-smile benefit-icon"></i>
+                                        <p class="benefit-text">Mood-boosting properties</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modern-product-footer">
+                         
+                     
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Mango -->
+                    <article class="modern-product-card" data-theme="mango" data-name="Mango Tango" data-tags="yoghurt mango tropical fruit">
+                        <div class="modern-product-media">
+                            <div class="modern-product-image" style="background-image: url('./Mango.jpg');"></div>
+                            <div class="modern-product-image-hover" style="background-image: url('https://imgs.search.brave.com/rIzu8T_-kFUW5NXZKcxSWPcrCM7LIvxNUAs4_JdIMZM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvcmlw/ZS1hbmQtZnJlc2gt/bWFuZ28tZnJ1aXRz/LTQ4azFuMTc2cXhz/c3lqaWIuanBn');"></div>
+                        </div>
+                        <div class="modern-product-info">
+                            <h3 class="modern-product-name">Mango Tango</h3>
+                            <p class="modern-product-desc">Tropical mango flavor that transports you to sunnier climates. an Exotic taste experience.</p>
+                            
+                            <div class="modern-product-features">
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Real mango</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>No added preservatives</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Full of Nutrients!</span>
+                                </div>
+                            </div>
+                            
+                            <div class="nutritional-info">
+                                <h4 class="nutritional-title"><i class="fas fa-chart-pie"></i> Nutritional Info (per 100g)</h4>
+                                <div class="nutritional-grid">
+                                    <div class="nutritional-item">
+                                        <div class="nutritional-value">2.3g</div>
+                                        <div class="nutritional-label">Protein</div>
+                                    </div>
+                                    <div class="nutritional-item">
+                                        <div class="nutritional-value">2.5g</div>
+                                        <div class="nutritional-label">Fat</div>
+                                    </div>
+                                    <div class="nutritional-item">
+                                        <div class="nutritional-value">14g</div>
+                                        <div class="nutritional-label">Carbs</div>
+                                    </div>
+                                    <div class="nutritional-item">
+                                        <div class="nutritional-value">88</div>
+                                        <div class="nutritional-label">Calories</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-benefits">
+                                <h4 class="benefits-title">Health Benefits</h4>
+                                <div class="benefits-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-eye benefit-icon"></i>
+                                        <p class="benefit-text">Supports eye health with vitamin A</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-sun benefit-icon"></i>
+                                        <p class="benefit-text">Boosts skin health and glow</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-umbrella-beach benefit-icon"></i>
+                                        <p class="benefit-text">Tropical vacation in every spoonful</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modern-product-footer">
+                              
+                              
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Banana -->
+                    <article class="modern-product-card" data-theme="banana" data-name="Banana Cream" data-tags="yoghurt banana potassium energy">
+                        <div class="modern-product-media">
+                            <div class="modern-product-badge">New</div>
+                            <div class="modern-product-image" style="background-image: url('./Banana.jpg');"></div>
+                            <div class="modern-product-image-hover" style="background-image: url('https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80');"></div>
+                        </div>
+                        <div class="modern-product-info">
+                            <h3 class="modern-product-name">Banana Cream</h3>
+                            <p class="modern-product-desc">Creamy banana flavor packed with natural sweetness and potassium. A perfect post-workout snack or breakfast companion that keeps you energized.</p>
+                            
+                            <div class="modern-product-features">
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Real banana</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>High potassium content</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Natural energy boost</span>
+                                </div>
+                            </div>
+                            
+                            <div class="nutritional-info">
+                                <h4 class="nutritional-title"><i class="fas fa-chart-pie"></i> Nutritional Info (per 100g)</h4>
+                                <div class="nutritional-grid">
+                                    <div class="nutritional-item">
+                                       <div class="nutritional-value">2.3g</div>
+                                        <div class="nutritional-label">Protein</div>
+                                    </div>
+                                    <div class="nutritional-item">
+                                        <div class="nutritional-value">2.5g</div>
+                                        <div class="nutritional-label">Fat</div>
+                                    </div>
+                                    <div class="nutritional-item">
+                                        <div class="nutritional-value">14g</div>
+                                        <div class="nutritional-label">Carbs</div>
+                                    </div>
+                                    <div class="nutritional-item">
+                                        <div class="nutritional-value">88</div>
+                                        <div class="nutritional-label">Calories</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-benefits">
+                                <h4 class="benefits-title">Health Benefits</h4>
+                                <div class="benefits-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-running benefit-icon"></i>
+                                        <p class="benefit-text">Excellent post-workout recovery food</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-heartbeat benefit-icon"></i>
+                                        <p class="benefit-text">Supports heart health</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-bolt benefit-icon"></i>
+                                        <p class="benefit-text">Natural energy source</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modern-product-footer">
+                           
+                               
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Milk Products -->
+            <section class="product-category" data-category="milk">
+                <header class="product-category-header">
+                    <h2 class="product-category-title">Premium Milk</h2>
+                    <p class="product-category-description">Our milk products are sourced from the finest dairy farms, pasteurized for safety while retaining maximum nutritional value and fresh taste.</p>
+                </header>
+                
+                <div class="modern-product-grid">
+                    <!-- Whole Milk -->
+                    <article class="modern-product-card" data-theme="milk" data-name="Milk" data-tags="milk calcium">
+                        <div class="modern-product-media">
+                            <div class="modern-product-image" style="background-image: url('https://holland-dairy.com/wp-content/uploads/2021/09/Milk-2-1.png');"></div>
+                        </div>
+                        <div class="modern-product-info">
+                            <h3 class="modern-product-name">Milk</h3>
+                            <p class="modern-product-desc">Rich, creamy milk with all its natural goodness intact. Packed with essential nutrients and the classic taste you love, perfect for drinking or cooking.</p>
+                          
+                            <div class="modern-product-features">
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Pure Milk!</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>High in calcium</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Rich in Nutrients!</span>
+                                </div>
+                            </div>
+                            
+                            <div class="nutritional-info">
+                                
+                            </div>
+                            
+                            <div class="product-benefits">
+                                <h4 class="benefits-title">Health Benefits</h4>
+                                <div class="benefits-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-bone benefit-icon"></i>
+                                        <p class="benefit-text">Builds strong bones and teeth</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-muscle benefit-icon"></i>
+                                        <p class="benefit-text">Supports muscle growth and repair</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-heart benefit-icon"></i>
+                                        <p class="benefit-text">Contains heart-healthy nutrients</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modern-product-footer">
+                       
+                              
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Cheese Products -->
+            <section class="product-category" data-category="cheese">
+                <header class="product-category-header">
+                    <h2 class="product-category-title">Cheese & Butter</h2>
+                    <p class="product-category-description">Our premium cheese and butter products are crafted with traditional methods for exceptional flavor and quality.</p>
+                </header>
+                
+                <div class="modern-product-grid">
+                    <!-- Cheddar Cheese -->
+                    <article class="modern-product-card" data-theme="cheese" data-name="Cheese" data-tags="cheese dairy">
+                        <div class="modern-product-media">
+                            <div class="modern-product-badge">Bestseller</div>
+                            <div class="modern-product-image" style="background-image: url('https://holland-dairy.com/wp-content/uploads/2021/09/Cheese-1.png');"></div>
+                        </div>
+                        <div class="modern-product-info">
+                            <h3 class="modern-product-name">Cheese</h3>
+                            <p class="modern-product-desc">Sharp, tangy cheddar with a firm texture. Aged to develop complex flavors, perfect for sandwiches, burgers, or cheese boards.</p>
+                            
+                            <div class="modern-product-features">
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                   <span>Natural!</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>High in protein</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Rich, bold flavor</span>
+                                </div>
+                            </div>
+                            
+                            <div class="nutritional-info">
+                        
+                            </div>
+                            
+                            <div class="product-benefits">
+                                <h4 class="benefits-title">Health Benefits</h4>
+                                <div class="benefits-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-bone benefit-icon"></i>
+                                        <p class="benefit-text">Promotes bone health</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-tooth benefit-icon"></i>
+                                        <p class="benefit-text">Supports dental health</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-muscle benefit-icon"></i>
+                                        <p class="benefit-text">Great for muscle maintenance</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modern-product-footer">
+                               
+                            
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Butter -->
+                    <article class="modern-product-card" data-theme="cheese" data-name="Butter" data-tags="butter dairy">
+                        <div class="modern-product-media">
+                            <div class="modern-product-badge">Bestseller</div>
+                            <div class="modern-product-image" style="background-image: url('https://holland-dairy.com/wp-content/uploads/2021/09/holland-Butter-1.png');"></div>
+                        </div>
+                        <div class="modern-product-info">
+                            <h3 class="modern-product-name">Butter</h3>
+                            <p class="modern-product-desc">Rich, creamy butter made from the freshest cream. Perfect for baking, cooking, or simply spreading on warm bread.</p>
+                            
+                            <div class="modern-product-features">
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Best Quality!</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>No artificial additives</span>
+                                </div>
+                                <div class="modern-product-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Rich golden color</span>
+                                </div>
+                            </div>
+                            
+                            <div class="nutritional-info">
+                              
+                            </div>
+                            
+                            <div class="product-benefits">
+                                <h4 class="benefits-title">Health Benefits</h4>
+                                <div class="benefits-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-heart benefit-icon"></i>
+                                        <p class="benefit-text">Contains healthy fatty acids</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-brain benefit-icon"></i>
+                                        <p class="benefit-text">Supports brain function</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-eye benefit-icon"></i>
+                                        <p class="benefit-text">Rich in vitamin A for eye health</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modern-product-footer">
+                           
+                                
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Ultra-Flashy Footer -->
+    <footer class="holland-footer">
+        <!-- Animated Background Pattern -->
+        <div class="footer-pattern"></div>
+        
+        <!-- Floating Elements -->
+        <div class="footer-floating floating-1"></div>
+        <div class="footer-floating floating-2"></div>
+        <div class="footer-floating floating-3"></div>
+        
+        <!-- Particle Animation -->
+        <div class="particles" id="particles-js"></div>
+        
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <div class="footer-logo-text">
+                    <img src="./Logo.PNG" alt="Holland Dairy"> HOLLAND
+                </div>
+                <p class="footer-description">
+                    Premium Ethiopian Yoghurt crafted with Dutch technology and local passion. Bringing you the creamiest, healthiest dairy experience.
+                </p>
+               <div class="footer-social">
+                    <a href="https://www.facebook.com/share/1CRdRBeX8n/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/hollanddairyethiopia?igsh=MWo2YzJ3Mnh3YWhscw==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@holland.dairy?_t=ZM-8z8ozdGAckv&_r=1" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/company/holland-dairy-ethiopia/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h3 class="footer-column-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./ourstory.html">Our Story</a></li>
+                    <li><a href="./FoodSafetyPolicy.html">Food Safety Policy</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info Column -->
+            <div class="footer-column">
+                <h3 class="footer-column-title">Contact Us</h3>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <p class="footer-contact-text">Bishoftu, Ethiopia</p>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <p class="footer-contact-text">011 4711948</p>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <p class="footer-contact-text">info@holland-dairy.com</p>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <p class="footer-contact-text">Mon-Fri: 8AM - 5PM</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            © <script>document.write(new Date().getFullYear())</script> Holland Dairy. All Rights Reserved. | 
+            <a href="#" style="color: rgba(255,255,255,0.8);">Privacy Policy</a> | 
+            <a href="#" style="color: rgba(255,255,255,0.8);">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Custom cursor effect
+            const cursor = document.querySelector('.cursor');
+            const cursorFollower = document.querySelector('.cursor-follower');
+            
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                setTimeout(() => {
+                    cursorFollower.style.left = e.clientX + 'px';
+                    cursorFollower.style.top = e.clientY + 'px';
+                }, 80);
+            });
+            
+            document.querySelectorAll('a, button, .modern-product-card').forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(1.5)';
+                    cursorFollower.style.transform = 'scale(0.6)';
+                });
+                
+                element.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursorFollower.style.transform = 'scale(1)';
+                });
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Theme changer function
+            function changeTheme(theme) {
+                document.body.className = '';
+                if (theme) {
+                    document.body.classList.add(`theme-${theme}`);
+                    
+                    // Update cursor color
+                    if (cursor) {
+                        cursor.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary');
+                    }
+                }
+            }
+
+            // Theme changer based on product hover
+            const productCards = document.querySelectorAll('.modern-product-card');
+            
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    const theme = card.getAttribute('data-theme');
+                    changeTheme(theme);
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    changeTheme('natural');
+                });
+
+                card.addEventListener('click', () => {
+                    const theme = card.getAttribute('data-theme');
+                    changeTheme(theme);
+                });
+            });
+
+            // Intersection Observer for animations
+            const animateElements = document.querySelectorAll('.modern-product-card, .product-category-header');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Improved Product search functionality
+            const searchBar = document.querySelector('.search-bar');
+            const noResults = document.querySelector('.no-results');
+            const productCategories = document.querySelectorAll('.product-category');
+            const productCardsAll = document.querySelectorAll('.modern-product-card');
+            
+            searchBar.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                let hasResults = false;
+                
+                if (searchTerm.length < 2) {
+                    // Show all products if search term is too short
+                    productCategories.forEach(category => {
+                        category.style.display = 'block';
+                        const cards = category.querySelectorAll('.modern-product-card');
+                        cards.forEach(card => card.style.display = 'block');
+                    });
+                    noResults.style.display = 'none';
+                    return;
+                }
+                
+                // First hide all product categories and cards
+                productCategories.forEach(category => {
+                    category.style.display = 'none';
+                });
+                
+                // Then show only matching products
+                productCardsAll.forEach(card => {
+                    const productName = card.getAttribute('data-name').toLowerCase();
+                    const productTags = card.getAttribute('data-tags').toLowerCase();
+                    
+                    if (productName.includes(searchTerm) || productTags.includes(searchTerm)) {
+                        card.style.display = 'block';
+                        const category = card.closest('.product-category');
+                        if (category) {
+                            category.style.display = 'block';
+                            // Show all cards in this category to maintain layout
+                            const cardsInCategory = category.querySelectorAll('.modern-product-card');
+                            cardsInCategory.forEach(c => c.style.display = 'block');
+                        }
+                        hasResults = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Show no results message if no matches found
+                noResults.style.display = hasResults ? 'none' : 'block';
+            });
+
+            // Initialize particles.js for footer
+            if (document.getElementById('particles-js')) {
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": {
+                            "value": 30,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#ff4d4d"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            },
+                            "polygon": {
+                                "nb_sides": 5
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.5,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 40,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": false,
+                            "distance": 150,
+                            "color": "#ffffff",
+                            "opacity": 0.4,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 1,
+                            "direction": "top",
+                            "random": true,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "repulse"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 400,
+                                "line_linked": {
+                                    "opacity": 1
+                                }
+                            },
+                            "bubble": {
+                                "distance": 400,
+                                "size": 40,
+                                "duration": 2,
+                                "opacity": 8,
+                                "speed": 3
+                            },
+                            "repulse": {
+                                "distance": 100,
+                                "duration": 0.4
+                            },
+                            "push": {
+                                "particles_nb": 4
+                            },
+                            "remove": {
+                                "particles_nb": 2
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+
+            // Set initial theme
+            changeTheme('natural');
+        });
+    </script>
+</body>
+</html>

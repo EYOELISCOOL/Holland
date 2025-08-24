@@ -1,0 +1,3876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Favicon.ico">
+    <title>HOLLAND | Premium Ethiopian Yoghurt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Mono+One&family=Press+Start+2P&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            /* Ultra Modern 2025 color scheme */
+            --primary: #6bce45;
+            --primary-light: rgba(255, 77, 77, 0.1);
+            --primary-dark: #6bce45;
+            --dark: #0A0A0A;
+            --darker: #050505;
+            --light: #FFFFFF;
+            --lighter: rgba(255,255,255,0.95);
+            --bg: #FAFAFA;
+            --text-color: #1A1A1A;
+            --text-light: rgba(26, 26, 26, 0.7);
+            --hero-text: #FFFFFF;
+            --section-padding: clamp(3rem, 6vw, 8rem) clamp(1.5rem, 4vw, 5rem);
+            --border-radius: 24px;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --glass-effect: rgba(255, 255, 255, 0.1);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+            --backdrop-filter: blur(16px);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-slow: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            --gradient-angle: 135deg;
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+            --max-width: 1440px;
+            --fluid-1: clamp(2rem, 6vw, 4rem);
+            --fluid-2: clamp(1.75rem, 5vw, 3.5rem);
+            --fluid-3: clamp(1.5rem, 4vw, 2.5rem);
+            --fluid-4: clamp(1.25rem, 3vw, 1.75rem);
+            --fluid-5: clamp(1rem, 2vw, 1.25rem);
+            --fluid-6: clamp(0.875rem, 1.5vw, 1rem);
+            --fluid-7: clamp(0.75rem, 1.2vw, 0.9rem);
+            
+            /* New 2025 variables */
+            --neon-glow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+            --neon-glow-light: 0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5);
+            --holographic-gradient: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
+            --liquid-filter: url('#liquid-effect');
+            --morph-time: 0.6s;
+            --parallax-depth: 100px;
+        }
+
+        /* Theme variations with modern color palettes */
+        .theme-natural {
+            --primary: #ebebeb;
+            --primary-dark: #14090c;
+            --primary-light: rgba(255, 107, 139, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(241, 241, 241, 0.9) 0%, rgba(230, 100, 130, 0.4) 100%);
+            --bg: #f8f8f8;
+            --neon-glow: 0 0 15px rgba(235,235,235,0.7), 0 0 30px rgba(235,235,235,0.4);
+            --section-gradient: linear-gradient(135deg, #f8f8f8 0%, #e6e6e6 100%);
+        }
+
+        .theme-strawberry {
+            --primary: #FF6B8B;
+            --primary-dark: #e05575;
+            --primary-light: rgba(255, 107, 139, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(190, 60, 90, 0.9) 0%, rgba(230, 100, 130, 0.4) 100%);
+            --bg: #fff0f3;
+            --neon-glow: 0 0 15px rgba(255,107,139,0.7), 0 0 30px rgba(255,107,139,0.4);
+            --section-gradient: linear-gradient(135deg, #fff0f3 0%, #ffd6de 100%);
+        }
+
+        .theme-mango {
+            --primary: #FFA630;
+            --primary-dark: #e69520;
+            --primary-light: rgba(255, 166, 48, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(210, 120, 30, 0.9) 0%, rgba(240, 150, 50, 0.4) 100%);
+            --bg: #fff8f0;
+            --neon-glow: 0 0 15px rgba(255,166,48,0.7), 0 0 30px rgba(255,166,48,0.4);
+            --section-gradient: linear-gradient(135deg, #fff8f0 0%, #ffebd6 100%);
+        }
+
+        .theme-banana {
+            --primary: #FFD166;
+            --primary-dark: #e6bc4d;
+            --primary-light: rgba(255, 209, 102, 0.15);
+            --hero-gradient: linear-gradient(var(--gradient-angle), rgba(210, 170, 70, 0.9) 0%, rgba(240, 200, 100, 0.4) 100%);
+            --bg: #fffdf0;
+            --neon-glow: 0 0 15px rgba(255,209,102,0.7), 0 0 30px rgba(255,209,102,0.4);
+            --section-gradient: linear-gradient(135deg, #fffdf0 0%, #fff8d6 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-color);
+            overflow-x: hidden;
+            transition: var(--transition-slow);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            font-size: var(--fluid-7);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-image: var(--section-gradient);
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            font-family: 'Syne', sans-serif;
+            letter-spacing: -0.03em;
+        }
+
+        h1 { font-size: var(--fluid-1); }
+        h2 { font-size: var(--fluid-2); }
+        h3 { font-size: var(--fluid-3); }
+        h4 { font-size: var(--fluid-4); }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Modern Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+            border: 2px solid var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Navigation - Ultra Modern 2025 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.2rem 5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: var(--transition);
+            background-color: rgba(255,255,255,0.98);
+            backdrop-filter: var(--backdrop-filter);
+            -webkit-backdrop-filter: var(--backdrop-filter);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(10,10,10,0.95) !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 0.8rem 5vw;
+        }
+
+        .navbar.scrolled .logo,
+        .navbar.scrolled .nav-links a {
+            color: var(--light) !important;
+        }
+
+        .navbar.scrolled .menu-toggle span {
+            background-color: var(--light) !important;
+        }
+
+        .theme-natural .navbar,
+        .theme-strawberry .navbar,
+        .theme-mango .navbar,
+        .theme-banana .navbar,
+        .theme-blueberry .navbar {
+            background-color: rgba(255,255,255,0.98);
+            border-bottom: 1px solid var(--primary-light);
+        }
+
+        .logo {
+            font-size: var(--fluid-3);
+            font-weight: 800;
+            color: var(--dark);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo img {
+            height: clamp(32px, 4vw, 42px);
+            transition: var(--transition);
+            filter: drop-shadow(var(--neon-glow-light));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1.5rem, 3vw, 3rem);
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--fluid-6);
+            position: relative;
+            transition: var(--transition);
+            opacity: 0.9;
+            padding: 0.5rem 0;
+            font-family: 'Syne', sans-serif;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+            border-radius: 2px;
+            box-shadow: var(--neon-glow-light);
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+            text-shadow: var(--neon-glow);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+            box-shadow: var(--neon-glow);
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 1001;
+            position: relative;
+            width: 32px;
+            height: 32px;
+        }
+
+        .menu-toggle span {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 3px;
+            box-shadow: var(--neon-glow-light);
+        }
+
+        .menu-toggle span:nth-child(1) {
+            top: 6px;
+        }
+
+        .menu-toggle span:nth-child(2) {
+            top: 16px;
+        }
+
+        .menu-toggle span:nth-child(3) {
+            top: 26px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 16px;
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 16px;
+        }
+
+        /* Hero Section - 2025 Ultra Modern */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 800px;
+            width: 100%;
+            overflow: hidden;
+            perspective: 1000px;
+            isolation: isolate;
+            margin-top: 80px;
+            background: var(--hero-gradient);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            opacity: 0;
+            transition: all 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            transform-style: preserve-3d;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            transform: scale(1.1);
+            transition: transform 8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-slide.active .hero-bg {
+            transform: scale(1);
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--hero-gradient);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 10vw;
+            color: var(--light);
+            transform: translateY(60px) rotateX(15deg);
+            opacity: 0;
+            transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+            transform-style: preserve-3d;
+            transform-origin: center bottom;
+        }
+
+        .hero-slide.active .hero-content {
+            transform: translateY(0) rotateX(0);
+            opacity: 1;
+        }
+
+        .hero-title {
+            font-family: 'Syne', sans-serif;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+            text-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+            color: var(--light);
+            text-transform: uppercase;
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+            font-size: var(--fluid-1);
+            text-shadow: var(--neon-glow);
+        }
+
+        .hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 3px;
+            box-shadow: var(--neon-glow);
+        }
+
+        .hero-subtitle {
+            font-family: 'Manrope', sans-serif;
+            margin-bottom: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            max-width: 500px;
+            line-height: 1.4;
+            font-weight: 400;
+            opacity: 0.9;
+            font-size: var(--fluid-5);
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            background-color: var(--primary);
+            color: var(--dark);
+            font-family: 'Syne', sans-serif;
+            font-size: var(--fluid-6);
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 10px 10px 0 rgba(0,0,0,0.15);
+            border: 3px solid var(--light);
+            text-transform: uppercase;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            transition: var(--transition-slow);
+            z-index: -1;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-8px) rotate(2deg);
+            box-shadow: 15px 15px 0 rgba(0,0,0,0.25);
+            background-color: var(--light);
+            color: var(--primary);
+            text-shadow: var(--neon-glow);
+        }
+
+        .hero-cta:hover::before {
+            transform: translateX(100%);
+        }
+
+        .hero-product-image {
+            position: relative;
+            z-index: 3;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 5vw;
+            transform: translateX(120px) rotateY(15deg);
+            opacity: 0;
+            transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+            transform-style: preserve-3d;
+            transform-origin: center left;
+        }
+
+        .hero-slide.active .hero-product-image {
+            transform: translateX(0) rotateY(0);
+            opacity: 1;
+        }
+
+        .hero-product-image img {
+            max-height: 70vh;
+            max-width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(15px 15px 30px rgba(0,0,0,0.5));
+            animation: float 6s ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        /* Slider Navigation - Modern Dots */
+        .hero-slider-nav {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+
+        .slider-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            border: 1px solid transparent;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .slider-dot:hover {
+            transform: scale(1.3);
+            background-color: var(--light);
+            box-shadow: var(--neon-glow-light);
+        }
+
+        .slider-dot.active {
+            background-color: var(--primary);
+            transform: scale(1.3);
+            border-color: var(--light);
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.2), var(--neon-glow);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            color: var(--light);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            opacity: 0;
+            transition: opacity 0.5s ease 1s;
+            cursor: pointer;
+            text-shadow: var(--neon-glow);
+        }
+
+        .hero-slide.active .hero-scroll {
+            opacity: 1;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-15px);}
+            60% {transform: translateY(-8px);}
+        }
+
+        /* About Section - 3D Parallax Effect */
+        .about {
+            padding: var(--section-padding);
+            background-color: var(--light);
+            position: relative;
+            overflow: hidden;
+            perspective: 1000px;
+            background-image: var(--section-gradient);
+            transition: var(--transition-slow);
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            transform: translateX(-60px) rotate(-5deg) translateZ(50px);
+            opacity: 0;
+            transition: var(--transition-slow);
+            position: relative;
+            transform-style: preserve-3d;
+            will-change: transform;
+            filter: drop-shadow(var(--neon-glow-light));
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+
+        .about-image.visible {
+            transform: translateX(0) rotate(0deg) translateZ(0);
+            opacity: 1;
+        }
+
+        .about-content {
+            transform: translateX(60px) translateZ(50px);
+            opacity: 0;
+            transition: var(--transition-slow);
+            transform-style: preserve-3d;
+        }
+
+        .about-content.visible {
+            transform: translateX(0) translateZ(0);
+            opacity: 1;
+        }
+
+        .about-title {
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            position: relative;
+            display: inline-block;
+            font-weight: 800;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .about-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 3px;
+            box-shadow: var(--neon-glow);
+        }
+
+        .about-text {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: var(--fluid-7);
+        }
+
+        /* Products Section - 3D Grid */
+        .products {
+            padding: var(--section-padding);
+            background-color: var(--bg);
+            position: relative;
+            overflow: hidden;
+            background-image: var(--section-gradient);
+            transition: var(--transition-slow);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            position: relative;
+        }
+
+        .section-title {
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 3px;
+            box-shadow: var(--neon-glow);
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: var(--fluid-6);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+
+        .product-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            transform: translateY(60px) scale(0.95) rotateX(15deg);
+            opacity: 0;
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+            will-change: transform;
+            border: 1px solid var(--glass-effect);
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.2) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .product-card.visible {
+            transform: translateY(0) scale(1) rotateX(0);
+            opacity: 1;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1), var(--neon-glow);
+            border-color: var(--primary);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            z-index: 2;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .product-image {
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            transition: var(--transition-slow);
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.08);
+        }
+
+        .product-info {
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+            background-color: var(--light);
+        }
+
+        .product-name {
+            margin-bottom: 0.8rem;
+            color: var(--text-color);
+            transition: var(--transition-fast);
+            font-size: var(--fluid-4);
+        }
+
+        .product-card:hover .product-name {
+            color: var(--primary);
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .product-desc {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: var(--fluid-7);
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: var(--fluid-4);
+            font-weight: 800;
+            color: var(--primary);
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .product-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--dark);
+            color: var(--light);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            font-size: 1.2rem;
+            box-shadow: var(--neon-glow-light);
+        }
+
+        .product-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: var(--transition-slow);
+        }
+
+        .product-cta:hover {
+            background-color: var(--primary);
+            transform: translateY(-4px) rotate(8deg);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15), var(--neon-glow);
+        }
+
+        .product-cta:hover::before {
+            left: 100%;
+        }
+
+        /* Values Section - Glass Morphism */
+        .values {
+            padding: var(--section-padding);
+            background-color: var(--light);
+            position: relative;
+            overflow: hidden;
+            background-image: var(--section-gradient);
+            transition: var(--transition-slow);
+        }
+
+        .values::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="%23f5f5f5" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2.5rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            transform: translateY(60px);
+            opacity: 0;
+            transition: var(--transition);
+            background-color: rgba(255,255,255,0.7);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-effect);
+            transform-style: preserve-3d;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--primary);
+            transition: var(--transition);
+            box-shadow: var(--neon-glow);
+        }
+
+        .value-card:hover::before {
+            height: 8px;
+        }
+
+        .value-card.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .value-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08), var(--neon-glow);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            color: var(--primary);
+            font-size: 2rem;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid var(--glass-effect);
+            box-shadow: var(--neon-glow-light);
+        }
+
+        .value-card:hover .value-icon {
+            transform: rotate(12deg) scale(1.1);
+            background-color: var(--primary);
+            color: var(--light);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08), var(--neon-glow);
+        }
+
+        .value-title {
+            margin-bottom: 1.2rem;
+            color: var(--text-color);
+            transition: var(--transition-fast);
+            font-weight: 700;
+            font-size: var(--fluid-4);
+        }
+
+        .value-card:hover .value-title {
+            color: var(--primary);
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .value-text {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: var(--fluid-7);
+        }
+        /* Ultra-Flashy Footer */
+        .holland-footer {
+            background-color: #000000;
+            padding: 5rem 5vw 3rem;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Syne', sans-serif;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            transition: var(--transition-slow);
+        }
+
+        .footer-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    rgba(66, 207, 38, 0.1),
+                    rgba(176, 184, 168, 0.05) 10px,
+                    transparent 10px,
+                    transparent 20px
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    rgba(52, 182, 20, 0.1),
+                    rgba(250, 245, 245, 0.05) 10px,
+                    transparent 10px,
+                    transparent 20px
+                );
+            z-index: 0;
+            animation: patternMove 20s linear infinite;
+        }
+
+        @keyframes patternMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 400px 400px; }
+        }
+
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+        }
+
+        .footer-brand {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo-text {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 2.5rem;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: var(--neon-glow);
+        }
+
+        .footer-logo-text img {
+            height: 50px;
+            filter: drop-shadow(0 0 10px rgba(255,77,77,0.5));
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(255,77,77,0.5)); }
+            100% { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(255,77,77,0.8)); }
+        }
+
+        .footer-description {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-size: 1.1rem;
+            max-width: 400px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column-title {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-size: 1.4rem;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: var(--neon-glow-light);
+        }
+
+        .footer-column-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 3px;
+            transition: var(--transition);
+            box-shadow: var(--neon-glow);
+        }
+
+        .footer-column:hover .footer-column-title::after {
+            width: 70px;
+            background-color: #ffffff;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+            transform: translateX(0);
+            transition: var(--transition);
+        }
+
+        .footer-links li:hover {
+            transform: translateX(10px);
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a::before {
+            content: '→';
+            color: var(--primary);
+            opacity: 0;
+            transition: var(--transition);
+            text-shadow: var(--neon-glow);
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            padding-left: 5px;
+            text-shadow: var(--neon-glow);
+        }
+
+        .footer-links a:hover::before {
+            opacity: 1;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .footer-contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .footer-contact-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 3px;
+            transition: var(--transition);
+            text-shadow: var(--neon-glow);
+        }
+
+        .footer-contact-item:hover .footer-contact-icon {
+            transform: scale(1.2);
+        }
+
+        .footer-contact-text {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        /* Social Media Icons */
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: var(--neon-glow-light);
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: var(--transition-slow);
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px) rotate(10deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2), var(--neon-glow);
+        }
+
+        .social-icon:hover::before {
+            left: 100%;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Floating elements in footer */
+        .footer-floating {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,77,77,0.05);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            animation: float 15s infinite ease-in-out;
+            z-index: 0;
+            box-shadow: var(--neon-glow-light);
+        }
+
+        .floating-1 {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-2 {
+            width: 200px;
+            height: 200px;
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-3 {
+            width: 100px;
+            height: 100px;
+            top: 30%;
+            right: 20%;
+            animation-delay: 4s;
+        }
+
+        /* Particle Animation */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background-color: rgba(255,77,77,0.3);
+            border-radius: 50%;
+            animation: particle-float linear infinite;
+        }
+
+        @keyframes particle-float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Floating Elements - 3D Particles */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            animation: float 15s infinite ease-in-out;
+            z-index: 0;
+            transform-style: preserve-3d;
+            will-change: transform;
+            box-shadow: var(--neon-glow-light);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg) translateZ(0);
+            }
+            25% {
+                transform: translate(15px, 15px) rotate(5deg) translateZ(15px);
+            }
+            50% {
+                transform: translate(-15px, 8px) rotate(-5deg) translateZ(8px);
+            }
+            75% {
+                transform: translate(8px, -15px) rotate(3deg) translateZ(12px);
+            }
+        }
+
+        /* Cursor Effects */
+        .cursor {
+            position: fixed;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.15s ease;
+            display: none;
+            box-shadow: var(--neon-glow);
+        }
+
+        .cursor-follower {
+            position: fixed;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: rgba(255, 77, 77, 0.2);
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease, width 0.2s ease, height 0.2s ease;
+            display: none;
+            box-shadow: var(--neon-glow-light);
+        }
+
+        /* 2025 Modern Additions */
+        .glow-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, var(--primary-light), transparent 70%);
+            opacity: 0.4;
+            z-index: -1;
+            pointer-events: none;
+            animation: glowPulse 8s infinite alternate;
+        }
+
+        @keyframes glowPulse {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.5; }
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hover-scale {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+
+        /* Product card image hover effect */
+        .product-image-container {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .product-image-main {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: var(--transition-slow);
+            transform-style: preserve-3d;
+            z-index: 1;
+        }
+
+        .product-image-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: var(--transition-slow);
+            transform-style: preserve-3d;
+            z-index: 2;
+        }
+
+        .product-card:hover .product-image-main {
+            opacity: 0;
+            transform: scale(1.1);
+        }
+
+        .product-card:hover .product-image-hover {
+            opacity: 1;
+            transform: scale(1.08);
+        }
+
+        /* New Section with Image on Right */
+        .full-width-feature {
+            padding: var(--section-padding);
+            background-color: var(--light);
+            position: relative;
+            background-image: var(--section-gradient);
+            transition: var(--transition-slow);
+        }
+
+        .full-width-feature-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .full-width-feature-image {
+            width: 100%;
+            height: 600px;
+            border-radius: var(--border-radius);
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 3rem;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            transform: translateY(40px);
+            opacity: 0;
+            filter: drop-shadow(var(--neon-glow-light));
+        }
+
+        .full-width-feature-image.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .full-width-feature-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            transform: translateY(40px);
+            opacity: 0;
+        }
+
+        .full-width-feature-content.visible {
+            transform: translateY(0);
+            opacity: 1;
+            transition: var(--transition-slow);
+        }
+
+        .full-width-feature-text {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin: 2rem 0;
+            font-size: var(--fluid-6);
+        }
+
+        /* Liquid Morph Effect */
+        .liquid-morph {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .liquid-morph::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--holographic-gradient);
+            z-index: 1;
+            opacity: 0.3;
+            transition: var(--transition-slow);
+        }
+
+        .liquid-morph:hover::before {
+            transform: translateX(100%);
+        }
+
+        /* Holographic Card Effect */
+        .holographic-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .holographic-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: var(--holographic-gradient);
+            transform: rotate(45deg);
+            opacity: 0.1;
+            transition: var(--transition-slow);
+            z-index: 1;
+        }
+
+        .holographic-card:hover::after {
+            transform: rotate(45deg) translateX(100%);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1600px) {
+            :root {
+                --section-padding: clamp(3rem, 5vw, 7rem) clamp(1.5rem, 3vw, 4rem);
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .section-title {
+                font-size: var(--fluid-2);
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            :root {
+                --section-padding: clamp(2.5rem, 4vw, 6rem) clamp(1rem, 3vw, 4rem);
+                --border-radius: 18px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-image {
+                height: 400px;
+                order: -1;
+            }
+            
+            .hero-cta {
+                font-size: var(--fluid-6);
+                padding: 1rem 2rem;
+            }
+            
+            .testimonial-text {
+                font-size: var(--fluid-5);
+            }
+            
+            .footer-logo-text {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: clamp(2rem, 3vw, 5rem) clamp(1rem, 2vw, 3rem);
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--dark);
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 2.5rem;
+                transform: translateX(100%);
+                transition: var(--transition);
+                z-index: 1000;
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                background-color: rgba(10,10,10,0.95);
+            }
+
+            .nav-links a {
+                color: rgba(255,255,255,0.9);
+            }
+
+            .nav-links a:hover {
+                color: var(--primary);
+            }
+
+            .theme-natural .nav-links a,
+            .theme-strawberry .nav-links a,
+            .theme-mango .nav-links a,
+            .theme-banana .nav-links a,
+            .theme-blueberry .nav-links a {
+                color: rgba(255,255,255,0.9);
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .hero-slide {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-product-image {
+                display: none;
+            }
+            
+            .hero-content {
+                text-align: center;
+                padding: 0 5vw;
+            }
+            
+            .hero-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-input {
+                border-radius: 50px;
+                margin-bottom: 1rem;
+            }
+
+            .newsletter-button {
+                border-radius: 50px;
+                width: 100%;
+            }
+
+            .testimonial-text {
+                font-size: var(--fluid-5);
+                padding: 0;
+            }
+
+            .testimonial-text::before,
+            .testimonial-text::after {
+                display: none;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-logo-text {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            :root {
+                --section-padding: clamp(1.5rem, 3vw, 4rem) clamp(1rem, 2vw, 2.5rem);
+            }
+
+            .about-title {
+                font-size: var(--fluid-3);
+            }
+
+            .newsletter-title {
+                font-size: var(--fluid-3);
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-slider-nav {
+                bottom: 60px;
+            }
+            
+            .slider-dot {
+                width: 14px;
+                height: 14px;
+            }
+            
+            .footer-logo-text {
+                font-size: 1.5rem;
+            }
+            
+            .footer-column-title {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .cursor, .cursor-follower {
+                display: block;
+            }
+        }
+
+        /* SVG Liquid Filter */
+        svg {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- SVG Filters for Liquid Effects -->
+    <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="liquid-effect">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="liquid" />
+                <feComposite in="SourceGraphic" in2="liquid" operator="atop"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="./Logo.PNG" alt="Holland Yoghurt"></a>
+        <div class="nav-links">
+            <a href="./Index.html">Home</a>
+            <a href="./Products.html">Products</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./ourstory.html">Our Story</a>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section - 2025 Style -->
+    <section class="hero" id="home">
+        <div class="glow-effect"></div>
+        <div class="hero-slider">
+            <!-- Slide 1 - Natural -->
+            <div class="hero-slide active" data-theme="natural">
+                <div class="hero-bg" style="background-image: url('https://imgs.search.brave.com/QgmoZ2ipMKoAfuOFF6VKlFquQv0D5hBC_T3Q-KbwKwA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTQ1/MzQwMTU2L3Bob3Rv/L2Jvd2wtb2Ytd2hp/dGUteW9naHVydC13/aXRoLWJlcnJpZXMt/aXNvbGF0ZWQtb24t/d2hpdGUtYmFjLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz0z/RWUxdDU2QUcwd19F/Tlo3dDZweVBKNjhu/ei1CZ0RZdUpxM1NB/T3BqSExJPQ');"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">PREMIUM<br>NATURAL<br>YOGHURT</h1>
+                    <p class="hero-subtitle">We've perfected Ethiopian Yoghurt processing. Our Dutch manufacturing process takes the highest quality raw local milk and transforms it into a rich, tasty, creamy, and delicious yoghurt that our consumers can't get enough of. The best part is that this Yoghurt is incredibly healthy!</p>
+                    <a href="#products" class="hero-cta">GET CREAMY!</a>
+                </div>
+                <div class="hero-product-image hover-scale liquid-morph">
+                    <img src="./Natural.PNG" alt="Natural Yoghurt">
+                </div>
+            </div>
+            
+            <!-- Slide 2 - Strawberry -->
+            <div class="hero-slide" data-theme="strawberry">
+                <div class="hero-bg" style="background-image: url('https://imgs.search.brave.com/ym9hjjr4ElLmwypa7HYW19qqWRoah3L_m_vRpAfV-EA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDkzMDYw/OTAuanBn');"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">LUSCIOUS<br>STRAWBERRY<br>BLAST</h1>
+                    <p class="hero-subtitle">Berry deliciousness that'll make your tastebuds dance!</p>
+                    <a href="#products" class="hero-cta">GET SWEET!</a>
+                </div>
+                <div class="hero-product-image hover-scale liquid-morph">
+                    <img src="./StrawBerry.PNG" alt="Strawberry Yoghurt" style="transform: scale(1.2);">
+                </div>
+            </div>
+            
+            <!-- Slide 3 - Mango -->
+            <div class="hero-slide" data-theme="mango">
+                <div class="hero-bg" style="background-image: url('https://imgs.search.brave.com/rIzu8T_-kFUW5NXZKcxSWPcrCM7LIvxNUAs4_JdIMZM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvcmlw/ZS1hbmQtZnJlc2gt/bWFuZ28tZnJ1aXRz/LTQ4azFuMTc2cXhz/c3lqaWIuanBn');"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">TROPICAL<br>MANGO<br>VIBES</h1>
+                    <p class="hero-subtitle">Sunshine in a cup - vacation for your mouth!</p>
+                    <a href="#products" class="hero-cta">GET TROPICAL!</a>
+                </div>
+                <div class="hero-product-image hover-scale liquid-morph">
+                    <img src="./Mango.jpg" alt="Mango Yoghurt">
+                </div>
+            </div>
+            
+            <!-- Slide 4 - Banana -->
+            <div class="hero-slide" data-theme="banana">
+                <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80');"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">CREAMY<br>BANANA<br>DREAM</h1>
+                    <p class="hero-subtitle">Potassium-packed perfection that's unap-peel-able!</p>
+                    <a href="#products" class="hero-cta">GO BANANAS!</a>
+                </div>
+                <div class="hero-product-image hover-scale liquid-morph">
+                    <img src="./Banana.jpg" alt="Banana Yoghurt">
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-slider-nav">
+            <div class="slider-dot active" data-index="0"></div>
+            <div class="slider-dot" data-index="1"></div>
+            <div class="slider-dot" data-index="2"></div>
+            <div class="slider-dot" data-index="3"></div>
+        </div>
+        
+        <a href="#about" class="hero-scroll"><i class="fas fa-chevron-down"></i></a>
+        
+        <!-- Floating elements -->
+        <div class="floating-element" style="width: 120px; height: 120px; top: 15%; left: 5%;"></div>
+        <div class="floating-element" style="width: 180px; height: 180px; top: 65%; left: 85%;"></div>
+        <div class="floating-element" style="width: 80px; height: 80px; top: 35%; left: 75%;"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image hover-scale liquid-morph" style="background-image: url('https://holland-dairy.com/wp-content/uploads/2021/08/4a8dae76-fc2b-4893-831b-8d934cdfbdc5.jpg');"></div>
+            <div class="about-content">
+                <h2 class="about-title">Premium Quality Products</h2>
+                <p class="about-text">You and your family deserve the highest quality dairy products to support a happy and healthy life. At Holland Dairy, we're committed to quality throughout all steps of our supply chain from the raw milk we buy from local farmers and the manufacturing process to the packaging and the distribution.</p>
+                <p class="about-text">Each batch is carefully cultured to perfection using traditional Dutch methods, resulting in a creamy texture and distinctive taste that sets us apart from mass-produced alternatives. Our yoghurt contains billions of live cultures to support your gut health.</p>
+                <a href="#" class="hero-cta" style="background-color: var(--dark);">Our Story</a>
+            </div>
+        </div>
+    </section>
+    <!-- Add this anywhere (best after hero or before footer) -->
+<div class="cyber-ticker">
+    <div class="cyber-ticker-track">
+        <div class="cyber-ticker-item">
+            <span class="glitch" data-text="DUTCH BY TECHNOLOGY በዜግነት ኢትዮጵያዊ ፣ በቴክኖሎጂ ደች።">DUTCH BY TECHNOLOGY በዜግነት ኢትዮጵያዊ ፣ በቴክኖሎጂ ደች።</span>
+            <span class="cyber-divider">//</span>
+            <span class="glitch" data-text="ETHIOPIAN BY NATIONALITY በዜግነት ኢትዮጵያዊ ፣ በቴክኖሎጂ ደች ።">ETHIOPIAN BY NATIONALITY በበዜግነት ኢትዮጵያዊ ፣ በቴክኖሎጂ ደች።</span>
+        </div>
+    </div>
+</div>
+<style>
+    /* CYBER TICKER - ULTRA-FAST & FUTURISTIC */
+.cyber-ticker {
+    background: #000;
+    color: #fff;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    position: relative;
+}
+
+.cyber-ticker::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    animation: scanline 3s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cyber-ticker-track {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker-scroll 10s linear infinite;
+    will-change: transform;
+}
+
+.cyber-ticker:hover .cyber-ticker-track {
+    animation: ticker-scroll 3s linear infinite;
+}
+
+.cyber-ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0 2rem;
+}
+
+.glitch {
+    position: relative;
+    color: #fff;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch::before {
+    color: #0ff;
+    z-index: -1;
+    animation: glitch-effect 3s infinite;
+}
+
+.glitch::after {
+    color: #f0f;
+    z-index: -2;
+    animation: glitch-effect 2s infinite reverse;
+}
+
+.cyber-divider {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+    animation: flicker 1s infinite alternate;
+}
+
+/* ANIMATIONS */
+@keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes glitch-effect {
+    0% { transform: translate(0); }
+    20% { transform: translate(-3px, 3px); }
+    40% { transform: translate(-3px, -3px); }
+    60% { transform: translate(3px, 3px); }
+    80% { transform: translate(3px, -3px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+    20%, 22%, 24%, 55% { opacity: 0.3; }
+}
+
+@keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .cyber-ticker-item {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+        gap: 1rem;
+    }
+}
+</style>
+<script>
+    // Makes the ticker even more aggressive on hover
+document.querySelectorAll('.cyber-ticker').forEach(ticker => {
+    ticker.addEventListener('mouseenter', () => {
+        ticker.style.animation = 'none';
+        ticker.offsetHeight; // Trigger reflow
+        ticker.style.animation = null;
+    });
+});
+
+// Random glitch effect every few seconds
+setInterval(() => {
+    const glitches = document.querySelectorAll('.glitch');
+    glitches.forEach(glitch => {
+        glitch.style.animation = 'none';
+        setTimeout(() => {
+            glitch.style.animation = 'glitch-effect 0.5s';
+        }, 50);
+    });
+}, 3000);
+</script>
+    <!-- New Section with Image on Right -->
+    <section class="about" id="tradition">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="about-title">Locally Sourced</h2>
+                <p class="about-text">Ethiopian dairy farming plays an important role in the economy of many rural communities. To support Ethiopia and Ethiopians, we are dedicated to only sourcing our raw milk from local farms.</p>
+                <p class="about-text">More importantly, we're focusing on smaller farms to help these local communities thrive.</p>
+                <a href="#" class="hero-cta" style="background-color: var(--dark);">Learn About Our Process</a>
+            </div>
+            <div class="about-image hover-scale liquid-morph" style="background-image: url('https://holland-dairy.com/wp-content/uploads/2021/08/pexels-cottonbro-4910769-1-1.jpg'); order: 2;"></div>
+        </div>
+    </section>
+    <!-- Add this after the hero section or before the footer -->
+<div class="luxury-ticker">
+    <div class="luxury-ticker-inner">
+        <div class="luxury-marquee">
+            <span class="luxury-text">HIGH-QUALITY IS NON-NEGOTIABLE</span>
+            <span class="luxury-divider">✦</span>
+            <span class="luxury-text">ETHIOPIAN HERITAGE</span>
+            <span class="luxury-divider">✦</span>
+            <span class="luxury-text">DUTCH TECHNOLOGY</span>
+            <span class="luxury-divider">✦</span>
+            <span class="luxury-text">PREMIUM INGREDIENTS</span>
+        </div>
+    </div>
+</div>
+<style>
+    /* ===== LUXURY TICKER ===== */
+.luxury-ticker {
+    background: rgba(17, 82, 1, 0.808);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(2, 2, 2, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.luxury-ticker::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--primary-light),
+        transparent
+    );
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.luxury-ticker-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.luxury-marquee {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.luxury-text {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: var(--fluid-6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--light);
+    text-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.3),
+        0 0 20px var(--primary-light);
+    position: relative;
+    white-space: nowrap;
+}
+
+.luxury-divider {
+    color: var(--primary);
+    font-size: var(--fluid-5);
+    opacity: 0.7;
+    animation: flicker 2s infinite alternate;
+}
+
+/* Subtle flicker effect for premium feel */
+@keyframes flicker {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; text-shadow: 0 0 10px var(--primary); }
+}
+
+/* Hover effect for interactivity */
+.luxury-marquee:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+    box-shadow: 
+        0 0 20px var(--primary-light),
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.luxury-marquee:hover .luxury-text {
+    text-shadow: 
+        0 0 15px rgba(8, 8, 8, 0.5),
+        0 0 25px var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .luxury-marquee {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+    }
+    
+    .luxury-divider {
+        display: none;
+    }
+}
+</style>
+<!-- Replace the existing full-width-feature section with this code -->
+<section class="full-width-feature" id="heritage">
+    <div class="full-width-feature-container">
+        <!-- Video container with dynamic effects -->
+        <div class="video-container liquid-morph">
+            <video autoplay muted loop playsinline class="video-background">
+                <source src="./Advert.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+            <div class="play-pulse"></div>
+            <div class="video-glare"></div>
+        </div>
+        
+        <!-- Text content below -->
+        <div class="full-width-feature-content">
+            <h2 class="section-title">Building a brighter tomorrow through dairy products.</h2>
+            <div class="full-width-feature-text">
+                <p>Holland Dairy is a leading dairy company in Ethiopia. We're Ethiopian by nationality and Dutch by technology. </p>
+                <p>Our purpose is to provide a healthy and positive future for Ethiopians and their families. We believe that high-quality, fresh dairy sourced from local farms should be accessible to all Ethiopians.</p>
+            </div>
+            <a href="#" class="hero-cta" style="background-color: var(--dark); margin-top: 2rem;">Explore Our History</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Video Container Styles */
+    .video-container {
+        position: relative;
+        width: 85%;
+        height: 400px;
+        margin: 0 auto 3rem;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2), 
+                    0 0 60px rgba(255,77,77,0.3);
+        transform: perspective(1000px) rotateX(5deg);
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .video-container:hover {
+        transform: perspective(1000px) rotateX(0deg) translateY(-10px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.3), 
+                    0 0 80px rgba(255,77,77,0.4);
+    }
+    
+    .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        filter: brightness(1.1) contrast(1.1);
+    }
+    
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, 
+                    rgba(0,0,0,0.3) 0%, 
+                    rgba(255,255,255,0.1) 50%, 
+                    rgba(0,0,0,0.3) 100%);
+        z-index: 2;
+        mix-blend-mode: overlay;
+    }
+    
+    .play-pulse {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        z-index: 3;
+        pointer-events: none;
+        animation: pulse 2s infinite;
+    }
+    
+    .video-glare {
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 50%;
+        height: 200%;
+        background: linear-gradient(to right, 
+                    rgba(255,255,255,0) 0%, 
+                    rgba(255,255,255,0.1) 20%, 
+                    rgba(255,255,255,0.2) 50%, 
+                    rgba(255,255,255,0.1) 80%, 
+                    rgba(255,255,255,0) 100%);
+        transform: rotate(45deg);
+        z-index: 2;
+        animation: glare 6s infinite;
+    }
+    
+    /* Animations */
+    @keyframes pulse {
+        0% {
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0.7;
+        }
+        50% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.3;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0.7;
+        }
+    }
+    
+    @keyframes glare {
+        0% {
+            top: -50%;
+            right: -50%;
+        }
+        50% {
+            top: 100%;
+            right: 100%;
+        }
+        100% {
+            top: -50%;
+            right: -50%;
+        }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .video-container {
+            width: 90%;
+            height: 350px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .video-container {
+            width: 95%;
+            height: 300px;
+        }
+        
+        .play-pulse {
+            width: 60px;
+            height: 60px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const videoContainer = document.querySelector('.video-container');
+        const video = document.querySelector('.video-background');
+        
+        // Add hover effect to simulate play button interaction
+        videoContainer.addEventListener('mouseenter', function() {
+            this.style.transform = 'perspective(1000px) rotateX(0deg) translateY(-10px) scale(1.02)';
+        });
+        
+        videoContainer.addEventListener('mouseleave', function() {
+            this.style.transform = 'perspective(1000px) rotateX(5deg)';
+        });
+        
+        // Add click to play/pause functionality
+        videoContainer.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+                videoContainer.querySelector('.play-pulse').style.opacity = '0';
+            } else {
+                video.pause();
+                videoContainer.querySelector('.play-pulse').style.opacity = '1';
+            }
+        });
+        
+        // Ensure video plays correctly on mobile
+        video.play().catch(function(error) {
+            console.log('Video autoplay failed: ', error);
+        });
+    });
+</script>
+
+<!-- Add this section anywhere in your HTML, perhaps after the values section -->
+<section class="benefits-showcase">
+    <!-- Animated background elements -->
+    <div class="benefits-particles"></div>
+    <div class="benefits-grid-overlay"></div>
+    
+    <!-- Main content -->
+    <div class="benefits-container">
+        <div class="benefits-header">
+            <h2 class="benefits-title">ELIXIR OF THE GODS</h2>
+            <p class="benefits-subtitle">WHY MERE MORTALS CRAVE OUR DAIRY SUPREMACY</p>
+        </div>
+        
+        <div class="benefits-content">
+            <!-- Left column - Yoghurt benefits -->
+            <div class="benefits-column yoghurt-benefits">
+                <div class="benefits-icon">
+                    <div class="icon-circle"></div>
+                    <span class="icon-text">YG</span>
+                </div>
+                <h3 class="column-title">YOGHURT <span class="superiority">SUPERIORITY</span></h3>
+                
+                <div class="benefit-item">
+                    <div class="benefit-number">01</div>
+                    <div class="benefit-content">
+                        <h4 class="benefit-title">BILLION-STRONG CULTURES</h4>
+                        <p class="benefit-description">Each spoonful delivers an army of probiotics that fortify your gut like an impenetrable fortress.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-number">02</div>
+                    <div class="benefit-content">
+                        <h4 class="benefit-title">DIGESTIVE ROYALTY</h4>
+                        <p class="benefit-description">Our cultured perfection transforms your digestive system into a well-oiled machine of efficiency.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-number">03</div>
+                    <div class="benefit-content">
+                        <h4 class="benefit-title">IMMUNITY ELEVATION</h4>
+                        <p class="benefit-description">Fortify your body's defenses with nature's most sophisticated protection system.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Center column - Visual divider -->
+            <div class="benefits-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">⚡</div>
+                <div class="divider-line"></div>
+            </div>
+            
+            <!-- Right column - Milk benefits -->
+            <div class="benefits-column milk-benefits">
+                <div class="benefits-icon">
+                    <div class="icon-circle"></div>
+                    <span class="icon-text">ML</span>
+                </div>
+                <h3 class="column-title">MILK <span class="supremacy">SUPREMACY</span></h3>
+                
+                <div class="benefit-item">
+                    <div class="benefit-number">01</div>
+                    <div class="benefit-content">
+                        <h4 class="benefit-title">CALCIUM MONARCHY</h4>
+                        <p class="benefit-description">Reinforce your skeletal structure with the undisputed ruler of bone fortification.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-number">02</div>
+                    <div class="benefit-content">
+                        <h4 class="benefit-title">PROTEIN DOMINANCE</h4>
+                        <p class="benefit-description">Fuel your musculature with nature's most complete protein source for unparalleled physical prowess.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-number">03</div>
+                    <div class="benefit-content">
+                        <h4 class="benefit-title">VITALITY SOVEREIGNTY</h4>
+                        <p class="benefit-description">Command peak performance with 13 essential nutrients working in perfect harmony.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="benefits-footer">
+            <p class="benefits-cta">EXPERIENCE THE DAIRY DIVINITY THAT SEPARATES ROYALTY FROM THE COMMONERS</p>
+            <a href="#products" class="benefits-button">ASCEND TO GREATNESS</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* BENEFITS SHOWCASE - ULTRA PREMIUM BLACK & WHITE */
+    .benefits-showcase {
+        position: relative;
+        padding: 8rem 5vw;
+        background: #000000;
+        color: #ffffff;
+        overflow: hidden;
+        isolation: isolate;
+        font-family: 'Syne', sans-serif;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .benefits-particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 40%),
+            radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 40%);
+        z-index: -1;
+    }
+    
+    .benefits-grid-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: radial-gradient(circle at center, black 20%, transparent 70%);
+        -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 70%);
+        z-index: -1;
+        animation: grid-move 20s linear infinite;
+    }
+    
+    @keyframes grid-move {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(50px, 50px); }
+    }
+    
+    .benefits-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .benefits-header {
+        text-align: center;
+        margin-bottom: 5rem;
+        position: relative;
+    }
+    
+    .benefits-title {
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, #fff 30%, #888 70%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .benefits-title::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(to right, transparent, #fff, transparent);
+    }
+    
+    .benefits-subtitle {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        opacity: 0.7;
+        margin-top: 2rem;
+    }
+    
+    .benefits-content {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 4rem;
+        align-items: start;
+        margin-bottom: 5rem;
+    }
+    
+    .benefits-column {
+        position: relative;
+        padding: 3rem 2rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: all 0.4s ease;
+    }
+    
+    .benefits-column:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: translateY(-5px);
+    }
+    
+    .benefits-icon {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .icon-circle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        animation: rotate 20s linear infinite;
+    }
+    
+    .icon-text {
+        font-weight: 800;
+        font-size: 1.2rem;
+        z-index: 1;
+    }
+    
+    .column-title {
+        text-align: center;
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-bottom: 3rem;
+        font-weight: 700;
+    }
+    
+    .superiority, .supremacy {
+        display: block;
+        font-size: 0.6em;
+        letter-spacing: 0.3em;
+        opacity: 0.8;
+        margin-top: 0.5rem;
+    }
+    
+    .benefit-item {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+        align-items: flex-start;
+    }
+    
+    .benefit-number {
+        font-size: 1.5rem;
+        font-weight: 700;
+        opacity: 0.5;
+        min-width: 40px;
+        position: relative;
+    }
+    
+    .benefit-number::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, #fff, transparent);
+    }
+    
+    .benefit-content {
+        flex: 1;
+    }
+    
+    .benefit-title {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.8rem;
+        font-weight: 700;
+    }
+    
+    .benefit-description {
+        opacity: 0.8;
+        line-height: 1.6;
+        font-size: 1.1rem;
+    }
+    
+    .benefits-divider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0 1rem;
+    }
+    
+    .divider-line {
+        flex: 1;
+        width: 1px;
+        background: linear-gradient(to bottom, transparent, #fff, transparent);
+    }
+    
+    .divider-icon {
+        margin: 1rem 0;
+        font-size: 2rem;
+        animation: pulse 2s infinite;
+    }
+    
+    .benefits-footer {
+        text-align: center;
+    }
+    
+    .benefits-cta {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-bottom: 3rem;
+        line-height: 1.4;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .benefits-button {
+        display: inline-block;
+        padding: 1.5rem 3rem;
+        background: transparent;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        font-weight: 700;
+        font-size: 1.1rem;
+        border: 2px solid #fff;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        text-decoration: none;
+    }
+    
+    .benefits-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: all 0.6s ease;
+    }
+    
+    .benefits-button:hover {
+        background: #fff;
+        color: #000;
+        padding: 1.5rem 4rem;
+    }
+    
+    .benefits-button:hover::before {
+        left: 100%;
+    }
+    
+    /* Animations */
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 0.7; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.2); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+        .benefits-content {
+            grid-template-columns: 1fr;
+            gap: 5rem;
+        }
+        
+        .benefits-divider {
+            flex-direction: row;
+            height: auto;
+            width: 100%;
+        }
+        
+        .divider-line {
+            width: 100%;
+            height: 1px;
+        }
+        
+        .divider-icon {
+            margin: 0 1rem;
+        }
+        
+        .benefits-column {
+            padding: 3rem 1.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .benefits-showcase {
+            padding: 5rem 5vw;
+        }
+        
+        .benefit-item {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .benefits-button {
+            padding: 1.2rem 2rem;
+        }
+        
+        .benefits-button:hover {
+            padding: 1.2rem 2.5rem;
+        }
+    }
+</style>
+
+<script>
+    // Additional animations for the benefits section
+    document.addEventListener('DOMContentLoaded', function() {
+        const benefitItems = document.querySelectorAll('.benefit-item');
+        
+        benefitItems.forEach((item, index) => {
+            // Staggered animation
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                item.style.transition = 'all 0.6s ease';
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }, 300 + (index * 200));
+        });
+        
+        // Hover effect for columns
+        const columns = document.querySelectorAll('.benefits-column');
+        columns.forEach(column => {
+            column.addEventListener('mouseenter', () => {
+                const iconCircle = column.querySelector('.icon-circle');
+                iconCircle.style.animation = 'rotate 5s linear infinite';
+            });
+            
+            column.addEventListener('mouseleave', () => {
+                const iconCircle = column.querySelector('.icon-circle');
+                iconCircle.style.animation = 'rotate 20s linear infinite';
+            });
+        });
+        
+        // Button magnetic effect
+        const benefitButton = document.querySelector('.benefits-button');
+        if (benefitButton) {
+            benefitButton.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                this.style.setProperty('--x', `${x}px`);
+                this.style.setProperty('--y', `${y}px`);
+            });
+        }
+    });
+</script>
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="section-header">
+            <h2 class="section-title">Our Premium Range</h2>
+            <p class="section-subtitle">Discover our selection of premium yoghurts, each crafted with care and the finest ingredients</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card hover-scale holographic-card" data-theme="natural">
+                <div class="product-badge">Bestseller</div>
+                <div class="product-image-container">
+                    <div class="product-image-main" style="background-image: url('./Natural.PNG');"></div>
+                    <div class="product-image-hover" style="background-image: url('https://imgs.search.brave.com/QgmoZ2ipMKoAfuOFF6VKlFquQv0D5hBC_T3Q-KbwKwA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTQ1/MzQwMTU2L3Bob3Rv/L2Jvd2wtb2Ytd2hp/dGUteW9naHVydC13/aXRoLWJlcnJpZXMt/aXNvbGF0ZWQtb24t/d2hpdGUtYmFjLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz0z/RWUxdDU2QUcwd19F/Tlo3dDZweVBKNjhu/ei1CZ0RZdUpxM1NB/T3BqSExJPQ');"></div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Natural</h3>
+                    <p class="product-desc">We've perfected Ethiopian Yoghurt processing. Our Dutch manufacturing process takes the highest quality raw local milk and transforms it into a rich, tasty, creamy, and delicious yoghurt that our consumers can't get enough of. The best part is that this Yoghurt is incredibly healthy!</p>
+                    <div class="product-footer">
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="product-card hover-scale holographic-card" data-theme="strawberry">
+                <div class="product-image-container">
+                    <div class="product-image-main" style="background-image: url('./StrawBerry.PNG');"></div>
+                    <div class="product-image-hover" style="background-image: url('https://imgs.search.brave.com/ym9hjjr4ElLmwypa7HYW19qqWRoah3L_m_vRpAfV-EA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDkzMDYw/OTAuanBn');"></div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Strawberry</h3>
+                    <p class="product-desc">Luscious strawberries blended with our signature creamy yoghurt. Bursting with real fruit pieces and natural sweetness.</p>
+                </div>
+            </div>
+            <div class="product-card hover-scale holographic-card" data-theme="mango">
+                <div class="product-image-container">
+                    <div class="product-image-main" style="background-image: url('./Mango.jpg');"></div>
+                    <div class="product-image-hover" style="background-image: url('https://imgs.search.brave.com/rIzu8T_-kFUW5NXZKcxSWPcrCM7LIvxNUAs4_JdIMZM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvcmlw/ZS1hbmQtZnJlc2gt/bWFuZ28tZnJ1aXRz/LTQ4azFuMTc2cXhz/c3lqaWIuanBn');"></div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Mango</h3>
+                    <p class="product-desc">Tropical mango flavor that transports you to sunnier climates. Made with real Alphonso mango puree for authentic taste.</p>
+                    <div class="product-footer">
+                     
+                    </div>
+                </div>
+            </div>
+            <div class="product-card hover-scale holographic-card" data-theme="banana">
+                <div class="product-image-container">
+                    <div class="product-image-main" style="background-image: url('./Banana.jpg');"></div>
+                    <div class="product-image-hover" style="background-image: url('https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80');"></div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Banana</h3>
+                    <p class="product-desc">Creamy banana flavor packed with natural sweetness and potassium. A perfect post-workout snack or breakfast companion.</p>
+                    <div class="product-footer">
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="holland-ad-section" id="holland-flash">
+    <!-- 3D Holland Text -->
+    <div class="holland-3d-text">
+        <span class="h-letter" data-char="H">H</span>
+        <span class="h-letter" data-char="O">O</span>
+        <span class="h-letter" data-char="L">L</span>
+        <span class="h-letter" data-char="L">L</span>
+        <span class="h-letter" data-char="A">A</span>
+        <span class="h-letter" data-char="N">N</span>
+        <span class="h-letter" data-char="D">D</span>
+    </div>
+    
+    <!-- Particle Background -->
+    <div class="holland-particles"></div>
+    
+    <!-- Glowing Rings -->
+    <div class="ring-ring ring-1"></div>
+    <div class="ring-ring ring-2"></div>
+    <div class="ring-ring ring-3"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-yoghurt yog-1">
+        <img src="./Natural.PNG" alt="Holland Yoghurt">
+    </div>
+    <div class="floating-yoghurt yog-2">
+        <img src="./StrawBerry.PNG" alt="Holland Yoghurt">
+    </div>
+    <div class="floating-yoghurt yog-3">
+        <img src="./Mango.jpg" alt="Holland Yoghurt">
+    </div>
+    
+    <!-- Dynamic Taglines -->
+    <div class="tagline-container">
+        <div class="tagline active">PREMIUM ETHIOPIAN YOGHURT</div>
+        <div class="tagline">DUTCH TECHNOLOGY • ETHIOPIAN HERITAGE</div>
+        <div class="tagline">THE CREAMIEST EXPERIENCE</div>
+        <div class="tagline">NATURAL • DELICIOUS • HEALTHY</div>
+    </div>
+    
+    <!-- Call to Action -->
+    <div class="holland-cta">
+        <a href="#products" class="holland-explode-btn">EXPERIENCE HOLLAND</a>
+    </div>
+    
+    <!-- Audio element for sound effects (muted by default) -->
+    <audio id="holland-sound" muted>
+        <source src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAADwADw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PD///////////////////////////////////////////////////////////////////////////8AAAA8TEFNRTMuMTAwBK8AAAAAAAAAADUgJAObQgABvAAADwPQu4rOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//tQZAAP8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAETEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV VaughnVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV极" type="audio/mpeg">
+    </audio>
+</section>
+
+<style>
+    /* HOLLAND AD SECTION - ULTRA FLASHY & DYNAMIC */
+    .holland-ad-section {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        isolation: isolate;
+        font-family: 'Syne', sans-serif;
+    }
+    
+    /* 3D Text Effect */
+    .holland-3d-text {
+        display: flex;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        margin-bottom: 3rem;
+        z-index: 10;
+    }
+    
+    .h-letter {
+        font-size: clamp(4rem, 10vw, 10rem);
+        font-weight: 900;
+        color: transparent;
+        text-shadow: 
+            0 0 10px var(--primary),
+            0 0 20px var(--primary),
+            0 0 30px var(--primary),
+            0 0 40px var(--primary),
+            0 0 70px var(--primary),
+            0 0 80px var(--primary),
+            0 0 100px var(--primary),
+            0 0 150px var(--primary);
+        animation: letter-glitch 3s infinite alternate;
+        position: relative;
+        margin: 0 0.5rem;
+        transform: translateZ(0);
+        transition: all 0.3s ease;
+    }
+    
+    .h-letter:nth-child(1) { animation-delay: 0.1s; color: #FF4D4D; }
+    .h-letter:nth-child(2) { animation-delay: 0.2s; color: #FF6B8B; }
+    .h-letter:nth-child(3) { animation-delay: 0.3s; color: #FFA630; }
+    .h-letter:nth-child(4) { animation-delay: 0.4s; color: #FFD166; }
+    .h-letter:nth-child(5) { animation-delay: 0.5s; color: #BAD76B; }
+    .h-letter:nth-child(6) { animation-delay: 0.6s; color: #4ECDC4; }
+    .h-letter:nth-child(7) { animation-delay: 0.7s; color: #6A0572; }
+    
+    .h-letter:hover {
+        transform: translateZ(50px) rotateY(20deg) scale(1.2);
+        text-shadow: 
+            0 0 20px currentColor,
+            0 0 40px currentColor,
+            0 0 60px currentColor,
+            0 0 80px currentColor,
+            0 0 120px currentColor;
+    }
+    
+    /* Particle Background */
+    .holland-particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-image: 
+            radial-gradient(circle at 20% 30%, rgba(255, 77, 77, 0.15) 0%, transparent 40%),
+            radial-gradient(circle at 80% 70%, rgba(255, 107, 139, 0.15) 0%, transparent 40%),
+            radial-gradient(circle at 40% 80%, rgba(255, 166, 48, 0.15) 0%, transparent 40%),
+            radial-gradient(circle at 60% 20%, rgba(255, 209, 102, 0.15) 0%, transparent 40%);
+        animation: particles-rotate 20s linear infinite;
+    }
+    
+    /* Glowing Rings */
+    .ring-ring {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        animation: ring-pulse 4s infinite;
+        z-index: 2;
+    }
+    
+    .ring-1 {
+        width: 300px;
+        height: 300px;
+        border-color: rgba(255, 77, 77, 0.3);
+        animation-delay: 0s;
+        box-shadow: 0 0 50px rgba(255, 77, 77, 0.5), inset 0 0 50px rgba(255, 77, 77, 0.3);
+    }
+    
+    .ring-2 {
+        width: 500px;
+        height: 500px;
+        border-color: rgba(255, 107, 139, 0.2);
+        animation-delay: 1s;
+        box-shadow: 0 0 70px rgba(255, 107, 139, 0.4), inset 0 0 70px rgba(255, 107, 139, 0.2);
+    }
+    
+    .ring-3 {
+        width: 700px;
+        height: 700px;
+        border-color: rgba(255, 166, 48, 0.1);
+        animation-delay: 2s;
+        box-shadow: 0 0 90px rgba(255, 166, 48, 0.3), inset 0 0 90px rgba(255, 166, 48, 0.1);
+    }
+    
+    /* Floating Yoghurt Elements */
+    .floating-yoghurt {
+        position: absolute;
+        z-index: 3;
+        animation: float-around 15s infinite ease-in-out;
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+    }
+    
+    .floating-yoghurt img {
+        height: 120px;
+        width: auto;
+        object-fit: contain;
+        transition: all 0.5s ease;
+    }
+    
+    .floating-yoghurt:hover img {
+        transform: scale(1.2) rotate(15deg);
+        filter: drop-shadow(0 0 25px var(--primary));
+    }
+    
+    .yog-1 {
+        top: 20%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+    
+    .yog-2 {
+        top: 70%;
+        right: 15%;
+        animation-delay: 5s;
+    }
+    
+    .yog-3 {
+        bottom: 20%;
+        left: 20%;
+        animation-delay: 10s;
+    }
+    
+    /* Taglines */
+    .tagline-container {
+        position: relative;
+        height: 60px;
+        overflow: hidden;
+        margin: 2rem 0;
+        z-index: 10;
+    }
+    
+    .tagline {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+        text-shadow: 
+            0 0 10px rgba(255, 255, 255, 0.7),
+            0 0 20px rgba(255, 255, 255, 0.5),
+            0 0 30px rgba(255, 255, 255, 0.3);
+    }
+    
+    .tagline.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* CTA Button */
+    .holland-cta {
+        margin-top: 3rem;
+        z-index: 10;
+    }
+    
+    .holland-explode-btn {
+        display: inline-block;
+        padding: 1.5rem 3rem;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: white;
+        font-family: 'Syne', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        box-shadow: 
+            0 0 20px rgba(255, 77, 77, 0.5),
+            0 0 40px rgba(255, 77, 77, 0.3),
+            inset 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    
+    .holland-explode-btn::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            45deg,
+            transparent, 
+            rgba(255, 255, 255, 0.3), 
+            transparent
+        );
+        transform: rotate(45deg);
+        animation: btn-shine 3s infinite;
+    }
+    
+    .holland-explode-btn:hover {
+        transform: scale(1.1) translateY(-5px);
+        box-shadow: 
+            0 0 30px rgba(255, 77, 77, 0.8),
+            0 0 60px rgba(255, 77, 77, 0.5),
+            0 0 100px rgba(255, 77, 77, 0.3),
+            inset 0 0 15px rgba(255, 255, 255, 0.3);
+        letter-spacing: 0.3em;
+    }
+    
+    /* ANIMATIONS */
+    @keyframes letter-glitch {
+        0%, 100% {
+            transform: translate3d(0, 0, 0) skew(0);
+            text-shadow: 
+                0 0 10px currentColor,
+                0 0 20px currentColor,
+                0 0 30px currentColor,
+                0 0 40px currentColor;
+        }
+        33% {
+            transform: translate3d(3px, -3px, 20px) skew(-3deg);
+            text-shadow: 
+                0 0 15px currentColor,
+                0 0 25px currentColor,
+                0 0 35px currentColor,
+                0 0 45px currentColor,
+                0 0 65px currentColor;
+        }
+        66% {
+            transform: translate3d(-2px, 2px, 30px) skew(2deg);
+            text-shadow: 
+                0 0 12px currentColor,
+                0 0 22px currentColor,
+                0 0 32px currentColor,
+                0 0 42px currentColor,
+                0 0 62px currentColor;
+        }
+    }
+    
+    @keyframes particles-rotate {
+        0% { transform: rotate(0deg) scale(1); }
+        50% { transform: rotate(180deg) scale(1.1); }
+        100% { transform: rotate(360deg) scale(1); }
+    }
+    
+    @keyframes ring-pulse {
+        0%, 100% { opacity: 0; transform: scale(0.8); }
+        50% { opacity: 1; transform: scale(1.1); }
+    }
+    
+    @keyframes float-around {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(50px, 30px) rotate(5deg); }
+        50% { transform: translate(0, 60px) rotate(0deg); }
+        75% { transform: translate(-50px, 30px) rotate(-5deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+    }
+    
+    @keyframes btn-shine {
+        0% { transform: translateX(-100%) rotate(45deg); }
+        100% { transform: translateX(100%) rotate(45deg); }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .holland-3d-text {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .h-letter {
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin: 0 0.2rem;
+        }
+        
+        .floating-yoghurt img {
+            height: 80px;
+        }
+        
+        .holland-explode-btn {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hollandSection = document.querySelector('.holland-ad-section');
+        const letters = document.querySelectorAll('.h-letter');
+        const taglines = document.querySelectorAll('.tagline');
+        const btn = document.querySelector('.holland-explode-btn');
+        const audio = document.getElementById('holland-sound');
+        
+        // Letter hover effects
+        letters.forEach(letter => {
+            letter.addEventListener('mouseenter', () => {
+                // Create particle burst effect
+                createParticles(letter, 10);
+                
+                // Play sound (unmute if user interacts)
+                if (audio.paused) {
+                    audio.currentTime = 0;
+                    audio.play().catch(e => console.log("Audio play prevented:", e));
+                }
+            });
+        });
+        
+        // Tagline rotation
+        let currentTagline = 0;
+        
+        function rotateTaglines() {
+            taglines.forEach(tagline => tagline.classList.remove('active'));
+            taglines[currentTagline].classList.add('active');
+            
+            currentTagline = (currentTagline + 1) % taglines.length;
+        }
+        
+        // Start tagline rotation
+        setInterval(rotateTaglines, 3000);
+        
+        // Button explosion effect
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Create explosive particles
+            createParticles(btn, 30);
+            
+            // Redirect after animation
+            setTimeout(() => {
+                window.location.href = btn.getAttribute('href');
+            }, 1000);
+        });
+        
+        // Create particles function
+        function createParticles(sourceElement, count) {
+            const rect = sourceElement.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            for (let i = 0; i < count; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'fixed';
+                particle.style.width = '10px';
+                particle.style.height = '10px';
+                particle.style.backgroundColor = getRandomColor();
+                particle.style.borderRadius = '50%';
+                particle.style.left = `${centerX}px`;
+                particle.style.top = `${centerY}px`;
+                particle.style.zIndex = '100';
+                particle.style.pointerEvents = 'none';
+                
+                document.body.appendChild(particle);
+                
+                // Animate particle
+                const angle = Math.random() * Math.PI * 2;
+                const distance = 50 + Math.random() * 100;
+                const duration = 500 + Math.random() * 500;
+                
+                const animation = particle.animate([
+                    { 
+                        transform: 'translate(0, 0) scale(1)',
+                        opacity: 1
+                    },
+                    { 
+                        transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(0)`,
+                        opacity: 0
+                    }
+                ], {
+                    duration: duration,
+                    easing: 'cubic-bezier(0.1, 0.8, 0.3, 1)'
+                });
+                
+                animation.onfinish = () => {
+                    particle.remove();
+                };
+            }
+        }
+        
+        function getRandomColor() {
+            const colors = [
+                '#FF4D4D', '#FF6B8B', '#FFA630', '#FFD166', '#BAD76B', '#4ECDC4', '#6A0572'
+            ];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+        
+        // Parallax effect on mouse move
+        hollandSection.addEventListener('mousemove', (e) => {
+            const { left, top, width, height } = hollandSection.getBoundingClientRect();
+            const x = (e.clientX - left) / width - 0.5;
+            const y = (e.clientY - top) / height - 0.5;
+            
+            // Move letters
+            letters.forEach((letter, index) => {
+                const depth = (index + 1) * 0.1;
+                letter.style.transform = `translateZ(${depth * 50}px) translateX(${x * depth * 30}px) translateY(${y * depth * 30}px)`;
+            });
+            
+            // Move floating yoghurts
+            document.querySelectorAll('.floating-yoghurt').forEach(yog => {
+                yog.style.transform = `translateX(${x * -20}px) translateY(${y * -20}px)`;
+            });
+        });
+        
+        // Initialize
+        rotateTaglines();
+    });
+</script>
+
+    <!-- Values Section -->
+    <section class="values">
+        <div class="section-header">
+            <h2 class="section-title">Our Core Values</h2>
+            <p class="section-subtitle">What makes Holland Yoghurt special</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-card glass-card hover-scale holographic-card">
+                <div class="value-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3 class="value-title">Natural Ingredients</h3>
+                <p class="value-text">We use only the finest natural ingredients with no artificial additives or preservatives. Every ingredient is carefully sourced for quality.</p>
+            </div>
+            <div class="value-card glass-card hover-scale holographic-card">
+                <div class="value-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="value-title">Probiotic Rich</h3>
+                <p class="value-text">Our yoghurt contains live cultures that support digestive health and immunity. Each spoonful delivers billions of beneficial bacteria.</p>
+            </div>
+            <div class="value-card glass-card hover-scale holographic-card">
+                <div class="value-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3 class="value-title">Sustainable</h3>
+                <p class="value-text">We're committed to eco-friendly practices from farm to packaging. Our dairy partners follow ethical and sustainable farming methods.</p>
+            </div>
+            <div class="value-card glass-card hover-scale holographic-card">
+                <div class="value-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="value-title">Premium Quality</h3>
+                <p class="value-text">Each batch is carefully crafted to meet our exacting standards of excellence. We never compromise on quality or taste.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ultra-Flashy Footer -->
+    <footer class="holland-footer">
+        <!-- Animated Background Pattern -->
+        <div class="footer-pattern"></div>
+        
+        <!-- Floating Elements -->
+        <div class="footer-floating floating-1"></div>
+        <div class="footer-floating floating-2"></div>
+        <div class="footer-floating floating-3"></div>
+        
+        <!-- Particle Animation -->
+        <div class="particles" id="particles-js"></div>
+        
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <div class="footer-logo-text">
+                    <img src="./Logo.PNG" alt="Holland Dairy"> 
+                </div>
+                <p class="footer-description">
+                    Premium Ethiopian Yoghurt crafted with Dutch technology and local passion. Bringing you the creamiest, healthiest dairy experience.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/1CRdRBeX8n/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/hollanddairyethiopia?igsh=MWo2YzJ3Mnh3YWhscw==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@holland.dairy?_t=ZM-8z8ozdGAckv&_r=1" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/company/holland-dairy-ethiopia/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h3 class="footer-column-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="./Index.html">Home</a></li>
+                    <li><a href="./Products.html">Products</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./ourstory.html">Our Story</a></li>
+                    <li><a href="./FoodSafetyPolicy.html">Food Safety Policy</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info Column -->
+            <div class="footer-column">
+                <h3 class="footer-column-title">Contact Us</h3>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <p class="footer-contact-text">Bishoftu, Ethiopia</p>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <p class="footer-contact-text">011 4711948</p>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <p class="footer-contact-text">info@holland-dairy.com</p>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <p class="footer-contact-text">Mon-Fri: 8AM - 5PM</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            © <script>document.write(new Date().getFullYear())</script> Holland Dairy. All Rights Reserved. | 
+            <a href="#" style="color: rgba(255,255,255,0.8);">Privacy Policy</a> | 
+            <a href="#" style="color: rgba(255,255,255,0.8);">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Custom cursor effect
+            const cursor = document.querySelector('.cursor');
+            const cursorFollower = document.querySelector('.cursor-follower');
+            
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                setTimeout(() => {
+                    cursorFollower.style.left = e.clientX + 'px';
+                    cursorFollower.style.top = e.clientY + 'px';
+                }, 80);
+            });
+            
+            document.querySelectorAll('a, button, .product-card, .slider-dot').forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(1.5)';
+                    cursorFollower.style.transform = 'scale(0.6)';
+                });
+                
+                element.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursorFollower.style.transform = 'scale(1)';
+                });
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Hero Slider functionality
+            const heroSlides = document.querySelectorAll('.hero-slide');
+            const sliderDots = document.querySelectorAll('.slider-dot');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                heroSlides.forEach(slide => slide.classList.remove('active'));
+                sliderDots.forEach(dot => dot.classList.remove('active'));
+                
+                heroSlides[index].classList.add('active');
+                sliderDots[index].classList.add('active');
+                currentSlide = index;
+                
+                // Change theme based on slide
+                const theme = heroSlides[index].getAttribute('data-theme');
+                changeTheme(theme);
+            }
+
+            function nextSlide() {
+                let nextIndex = (currentSlide + 1) % heroSlides.length;
+                showSlide(nextIndex);
+            }
+
+            sliderDots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    showSlide(parseInt(dot.getAttribute('data-index')));
+                    startSlideInterval();
+                });
+            });
+
+            function startSlideInterval() {
+                slideInterval = setInterval(nextSlide, 5000); // Change every 5 seconds
+            }
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                });
+            });
+
+            // Testimonial slider
+            const testimonials = document.querySelectorAll('.testimonial');
+            const dots = document.querySelectorAll('.testimonial-dot');
+            let currentTestimonial = 0;
+            let testimonialInterval;
+
+            function showTestimonial(index) {
+                testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                testimonials[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentTestimonial = index;
+            }
+
+            function nextTestimonial() {
+                let nextIndex = (currentTestimonial + 1) % testimonials.length;
+                showTestimonial(nextIndex);
+            }
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    clearInterval(testimonialInterval);
+                    showTestimonial(parseInt(dot.getAttribute('data-index')));
+                    startTestimonialInterval();
+                });
+            });
+
+            function startTestimonialInterval() {
+                testimonialInterval = setInterval(nextTestimonial, 6000);
+            }
+
+            // Theme changer function
+            function changeTheme(theme) {
+                document.body.className = ''; // Remove all theme classes
+                if (theme) {
+                    document.body.classList.add(`theme-${theme}`);
+                    
+                    // Update cursor color
+                    if (cursor) {
+                        cursor.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary');
+                    }
+                    
+                    // Update navbar elements
+                    const navbar = document.querySelector('.navbar');
+                    const logo = document.querySelector('.logo');
+                    const navLinks = document.querySelectorAll('.nav-links a');
+                    const menuToggle = document.querySelector('.menu-toggle span');
+                    
+                    if (navbar) {
+                        navbar.style.borderBottomColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-light');
+                    }
+                    
+                    // Update logo color based on theme
+                    if (logo) {
+                        logo.style.color = getComputedStyle(document.documentElement).getPropertyValue('--dark');
+                    }
+                    
+                    // Update nav links color
+                    navLinks.forEach(link => {
+                        link.style.color = getComputedStyle(document.documentElement).getPropertyValue('--dark');
+                    });
+                    
+                    // Update menu toggle color
+                    if (menuToggle) {
+                        menuToggle.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--dark');
+                    }
+                }
+            }
+
+            // Theme changer based on product hover
+            const productCards = document.querySelectorAll('.product-card');
+            const footerLinks = document.querySelectorAll('.footer-links a[data-theme]');
+            
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    const theme = card.getAttribute('data-theme');
+                    changeTheme(theme);
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    // Revert to current slide's theme when leaving product card
+                    const currentTheme = heroSlides[currentSlide].getAttribute('data-theme');
+                    changeTheme(currentTheme);
+                });
+
+                // Also change theme when clicked (for mobile)
+                card.addEventListener('click', () => {
+                    const theme = card.getAttribute('data-theme');
+                    changeTheme(theme);
+                });
+            });
+
+            footerLinks.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    const theme = link.getAttribute('data-theme');
+                    changeTheme(theme);
+                });
+
+                link.addEventListener('mouseleave', () => {
+                    // Revert to current slide's theme when leaving footer link
+                    const currentTheme = heroSlides[currentSlide].getAttribute('data-theme');
+                    changeTheme(currentTheme);
+                });
+            });
+
+            // Intersection Observer for animations
+            const animateElements = document.querySelectorAll(
+                '.hero-content, .hero-scroll, .product-card, .about-image, .about-content, .value-card, .newsletter-container, .full-width-feature-image, .full-width-feature-content'
+            );
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Product section intersection observer
+            const productSections = document.querySelectorAll('.product-card');
+            const productObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const theme = entry.target.getAttribute('data-theme');
+                        changeTheme(theme);
+                    }
+                });
+            }, {
+                threshold: 0.5,
+                rootMargin: '0px 0px -50% 0px'
+            });
+
+            productSections.forEach(section => {
+                productObserver.observe(section);
+            });
+
+            // Hero slide intersection observer
+            const heroSlideObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const theme = entry.target.getAttribute('data-theme');
+                        changeTheme(theme);
+                    }
+                });
+            }, {
+                threshold: 0.7
+            });
+
+            document.querySelectorAll('.hero-slide').forEach(slide => {
+                heroSlideObserver.observe(slide);
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', () => {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Initialize particles.js for footer
+            if (document.getElementById('particles-js')) {
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": {
+                            "value": 30,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#ff4d4d"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            },
+                            "polygon": {
+                                "nb_sides": 5
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.5,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 40,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": false,
+                            "distance": 150,
+                            "color": "#ffffff",
+                            "opacity": 0.4,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 1,
+                            "direction": "top",
+                            "random": true,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "repulse"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 400,
+                                "line_linked": {
+                                    "opacity": 1
+                                }
+                            },
+                            "bubble": {
+                                "distance": 400,
+                                "size": 40,
+                                "duration": 2,
+                                "opacity": 8,
+                                "speed": 3
+                            },
+                            "repulse": {
+                                "distance": 100,
+                                "duration": 0.4
+                            },
+                            "push": {
+                                "particles_nb": 4
+                            },
+                            "remove": {
+                                "particles_nb": 2
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+
+            // Initialize
+            startSlideInterval();
+            startTestimonialInterval();
+            
+            // Set initial theme based on first slide
+            const initialTheme = heroSlides[0].getAttribute('data-theme');
+            changeTheme(initialTheme);
+        });
+    </script>
+</body>
+</html>
